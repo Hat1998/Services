@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { Spinner } from "@chakra-ui/react";
 
 function ShowCards() {
      
@@ -29,8 +30,8 @@ localStorage.getItem('id')
       
   }
   return (
-      <>
- 
+        <div className="Show_cards">
+   
       {data.map((item:any)=>
         <div className="list">
           
@@ -48,7 +49,7 @@ localStorage.getItem('id')
         </div>
       )}
       
-    </>
+    </div>
   )
 }
   export default ShowCards;
