@@ -1,4 +1,7 @@
-.Show_cards button{
-  background-color: rgb(243, 43, 43);
-  margin: 0.3rem;
+.spinner{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  display: table;
+ 
 }

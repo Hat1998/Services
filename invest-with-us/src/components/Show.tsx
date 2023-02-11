@@ -1,11 +1,14 @@
 import React from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import { Spinner } from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
 
 function ShowCards() {
      
   const [data , setData] =React.useState<any[]>([])
+// to show and hide spinner for 3 sec
+  const [showElement,setShowElement] = React.useState(true)
+
   React.useEffect(() => {
  axios.get("https://63e223f43e12b1937638a4ed.mockapi.io/todo").then(res=> {
   
@@ -13,7 +16,14 @@ function ShowCards() {
  setData(res.data)
  })
   },[]) 
-
+// Spinner time
+  React.useEffect(()=>{
+    setTimeout(function() {
+      setShowElement(false)
+         }, 2000);
+       },
+   [])
+   
 const UpdateItam=(id:any) => {
 console.log(id);
 axios.put(`https://63e223f43e12b1937638a4ed.mockapi.io/todo/${id}`)
@@ -31,7 +41,21 @@ localStorage.getItem('id')
   }
   return (
         <div className="Show_cards">
-   
+{showElement?<div className="spinner"> 
+<Spinner
+   boxSize='12rem'
+  thickness='15px'
+  speed='0.65s'
+  emptyColor='gray.200'
+  color='blue.500'
+  size='xl'
+  ml={'auto'}
+  
+ 
+/></div>:<></>}
+
+
+
       {data.map((item:any)=>
         <div className="list">
           
@@ -60,3 +84,7 @@ localStorage.getItem('id')
 
 
   
+function useEffect(arg0: () => void, arg1: never[]) {
+  throw new Error("Function not implemented.");
+}
+
