@@ -19,10 +19,7 @@ const PostData = ()=>{
         })
         axios.get("https://63e223f43e12b1937638a4ed.mockapi.io/todo")
         navigate("/Show")
-    // }else{
-    //     alert("Please write correct information")
-    // }
-
+ 
 }
   return (
     <div className="add">
