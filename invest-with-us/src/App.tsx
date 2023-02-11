@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.css'
 import HomePage from './components/HomePage'
+import Show from './components/Show';
 
 function App() {
 
@@ -22,9 +23,10 @@ function App() {
 
 
 
+{/* <Show/> */}
 
     </div>
   )
 }
 
-export default App
+export default App;
