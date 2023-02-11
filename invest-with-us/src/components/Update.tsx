@@ -35,7 +35,7 @@ const Update =  async ()=>{
          
 
         <input placeholder='Add list' onChange={e =>{setTask(e.target.value)}}></input>
-        {/* <input placeholder=' اسم العائلة' onChange={e =>{setLastName(e.target.value)}}></input> */}
+        
         <button onClick={Update}> Update</button>
      
     </div>
