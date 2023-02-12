@@ -19,19 +19,13 @@ const PostData = ()=>{
         })
         axios.get("https://63e223f43e12b1937638a4ed.mockapi.io/todo")
         navigate("/Show")
-    // }else{
-    //     alert("Please write correct information")
-    // }
-
+ 
 }
   return (
     <div className="add">
         <h1> The List</h1>
       
         <input placeholder='Add' onChange={e =>{setTask(e.target.value)}}></input>
-          {/* <input placeholder=' اسم العائلة' onChange={e =>{setLastName(e.target.value)}}></input>
-          <input placeholder=' البريد الاكتروني' onChange={e =>{setEmail(e.target.value)}}></input>
-          <input placeholder='رقم التواصل' onChange={e =>{setNumber(e.target.value)}}></input> */}
         <button onClick={PostData}>add new</button>
         <Show/>
     </div>

@@ -2,7 +2,11 @@ import React from 'react'
 
 function Invest_Login() {
   return (
-    <div>Invest-Login</div>
+    <div className="Invest_Login<">
+
+
+        
+    </div>
   )
 }
 

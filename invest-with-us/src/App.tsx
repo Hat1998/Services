@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import HomePage from './components/HomePage'
+import Show from './components/Show';
+
 import './App.css'
 import AddCompany from './components/AddCompany'
 
@@ -7,9 +9,16 @@ function App() {
  
   return (
     <div className="App">
-      <AddCompany/>
-    </div>
-  )
-}
+      <HomePage/>
 
-export default App
+      <AddCompany/>
+
+      </div>
+
+
+
+)
+
+ }
+
+ export default App;
