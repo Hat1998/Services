@@ -1,32 +1,32 @@
 import { useState } from 'react'
-
-import './App.css'
 import HomePage from './components/HomePage'
-import Show from './components/Show';
+import Show from './components/ShowCards';
+ import './App.css'
+import AddCompany from './components/AddCompany'
+import ShowCards from './components/ShowCards';
+import CompanyHome from './components/CompanyHome';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-
+ 
   return (
     <div className="App">
+       {/* <HomePage/>
+
+      <AddCompany/> */}
+
+      <Routes>
+        <Route path='/add' element={ <AddCompany/>}/>
+        <Route path='/companies' element={ <CompanyHome/>}/>
+        <Route path='/show' element={<ShowCards/>}/>
+      </Routes>
+      
+    </div>   
+ )
+ }
 
 
 
-<HomePage/>
-
-
-
-
-
-
-
-
-
-
-
-{/* <Show/> */}
-
-    </div>
-  )
-}
 
 export default App;
+
