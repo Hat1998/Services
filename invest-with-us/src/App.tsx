@@ -1,19 +1,23 @@
 import { useState } from 'react'
 import HomePage from './components/HomePage'
-import Show from './components/Show';
+import Show from './components/ShowCards';
 
 import './App.css'
 import AddCompany from './components/AddCompany'
+import ShowCards from './components/ShowCards';
 
 function App() {
  
   return (
     <div className="App">
-      <HomePage/>
+
+
+      {/* <HomePage/> */}
 
       <AddCompany/>
 
-      {/* <Show/> */}
+      <ShowCards/>
+
       </div>
 
 
