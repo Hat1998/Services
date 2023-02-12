@@ -3,17 +3,24 @@ import HomePage from './components/HomePage'
 import Show from './components/Show';
 
 import './App.css'
-import AddCompany from './components/AddCompany'
+ import CompanyHome from './components/CompanyHome';
+import { Box } from '@chakra-ui/react';
+import { Routes,Route } from 'react-router-dom';
+import AddCompany from './components/AddCompany';
 
 function App() {
  
   return (
-    <div className="App">
-      <HomePage/>
+    <Box className="App" >
 
-      <AddCompany/>
+     
+      <CompanyHome/>
+      <Routes>
+        <Route path='/AddCompany' element={<AddCompany/>}/>
+      </Routes>
+       
 
-      </div>
+      </Box>
 
 
 
