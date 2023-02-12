@@ -23,6 +23,7 @@ function ShowCards() {
          }, 2000);
        },
    [])
+   //
    
 const UpdateItam=(id:any) => {
 console.log(id);
@@ -83,8 +84,4 @@ localStorage.getItem('id')
  
 
 
-  
-function useEffect(arg0: () => void, arg1: never[]) {
-  throw new Error("Function not implemented.");
-}
 
