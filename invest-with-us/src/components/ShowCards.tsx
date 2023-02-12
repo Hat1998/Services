@@ -73,7 +73,7 @@ function ShowCards() {
  {/*Grid  cards  Container --------------------------------------------------*/}
  <Box>
      {/*Start of Grid body */}
-    <Grid   templateColumns='repeat(3, 1fr)' border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} mt='60px'  gap={15}> 
+    <Grid templateColumns='repeat(3, 1fr)'borderColor={"blackAlpha.800"} borderRadius={'2xl'}  gap={'0rem'}> 
     
     {/*Mapping ----------  */}
 
@@ -88,6 +88,9 @@ function ShowCards() {
       _dark={{ bg: "#3e3e3e" }}
        alignItems="center"
       justifyContent="center"
+       
+        my="2rem"
+      
     >
       <Box
         w="sm"
@@ -97,6 +100,7 @@ function ShowCards() {
         shadow="lg"
         rounded="lg"
         overflow="hidden"
+        h='lg'
       >
         <Image
           w="full"
@@ -107,10 +111,10 @@ function ShowCards() {
           alt="avatar"
         />
 
-        <Flex alignItems="center" px={6} py={3} bg="gray.900">
+        <Flex alignItems="center" px={6} py={3} bg="gray.400">
 
-          <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg" >
-          
+          <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="lg" >
+          header
            </chakra.h1>
         </Flex>
 
