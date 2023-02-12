@@ -15,6 +15,7 @@ function ShowCards() {
   const[email, setEmail]= React.useState('')
   const[companyName, setCompanyName]= React.useState("")
   const[photo, setPhoto]= React.useState('')
+
   const[annualIncome, setAnnualIncome]= React.useState('')
   const[description, setDescription]= React.useState('')
 
@@ -102,12 +103,11 @@ function ShowCards() {
           h={56}
           fit="cover"
           objectPosition="center"
-          src= {photo}
+          src= {item.photo}
           alt="avatar"
         />
 
         <Flex alignItems="center" px={6} py={3} bg="gray.900">
-          <Icon as={MdHeadset} h={6} w={6} color="white" />
 
           <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg" >
           

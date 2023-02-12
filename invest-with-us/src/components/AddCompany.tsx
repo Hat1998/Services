@@ -13,13 +13,15 @@ function AddCompany() {
     const[email, setEmail]= React.useState('')
     const[companyName, setCompanyName]= React.useState("")
     const[photo, setPhoto]= React.useState('')
+    // const[photo, setPhoto]= React.useState('')
     const[annualIncome, setAnnualIncome]= React.useState('')
     const[description, setDescription]= React.useState('')
     const[location, setLocation]= React.useState('')
     const[business, setBusiness]= React.useState('')
     // const[description, setDescription]= React.useState('')
-
-  
+    // const [photo, setPhoto] = React.useState<any>();
+    // const [file, setFile] = useState();
+   
 
     React.useEffect(() => {
         axios
@@ -87,10 +89,10 @@ function AddCompany() {
         <Input placeholder="Last name" onChange={e =>{ setlasttName(e.target.value)}} />
         </GridItem>
 
-        <GridItem >
+         <GridItem >
         <FormLabel>Photo</FormLabel>
         <Input placeholder="Photo " onChange={e =>{setPhoto(e.target.value)}}/>
-        </GridItem>
+        </GridItem> 
 
         <GridItem >
         <FormLabel>Email</FormLabel>
@@ -109,7 +111,8 @@ function AddCompany() {
         <FormLabel>Business Area</FormLabel>
         <Input placeholder="Business Area" onChange={e =>{setBusiness(e.target.value)}}/>
         </GridItem>
-
+        {/* <input type="file"onChange={e => setFile(URL.createObjectURL(e.target.files[0]))} />
+            <img src={file} /> */}
       </FormControl>
       <Box  margin={'30px'}>
         <FormLabel>Description</FormLabel>

@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import HomePage from './components/HomePage'
 import Show from './components/ShowCards';
-
-import './App.css'
+ import './App.css'
 import AddCompany from './components/AddCompany'
 import ShowCards from './components/ShowCards';
 import CompanyHome from './components/CompanyHome';
@@ -12,7 +11,7 @@ function App() {
  
   return (
     <div className="App">
-      {/* <HomePage/>
+       {/* <HomePage/>
 
       <AddCompany/> */}
 
@@ -22,16 +21,8 @@ function App() {
         <Route path='/show' element={<ShowCards/>}/>
       </Routes>
       
-       
-
-      {/* <Show/> */}
-      
-      </div>
-
-
-
-)
-
+    </div>   
+ )
  }
 
 
