@@ -6,6 +6,7 @@ import AddCompany from './components/AddCompany'
 import ShowCards from './components/ShowCards';
 import CompanyHome from './components/CompanyHome';
 import { Routes, Route } from 'react-router-dom';
+import CardDetails from './components/CardDetails';
 
 function App() {
  
@@ -19,6 +20,8 @@ function App() {
         <Route path='/add' element={ <AddCompany/>}/>
         <Route path='/companies' element={ <CompanyHome/>}/>
         <Route path='/show' element={<ShowCards/>}/>
+        <Route path='/details' element={<CardDetails/>}/>
+
       </Routes>
       
     </div>   

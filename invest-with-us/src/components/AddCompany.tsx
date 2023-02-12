@@ -1,4 +1,4 @@
-import { Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
+import { Alert,Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
 import {StarIcon} from '@chakra-ui/icons'
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
@@ -40,6 +40,7 @@ function AddCompany() {
       }, []);
         console.log(data)
     function post(){
+   
         axios.post('https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB',{
             firstName,
             lasttName,
@@ -49,14 +50,13 @@ function AddCompany() {
             annualIncome,
             location,
             business,
-            sharePrice,
+             sharePrice,
             description,
             investmentPrice,
-            conference
-
-
-        }) 
-        navigate('/companies')
+            conference  
+         }) 
+         axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
+        navigate('/companies', {})
 
 
 
@@ -76,14 +76,14 @@ function AddCompany() {
               })
             );
           });
-      };*/
+      };*/  
 
   return (
-
+ 
     <Box w='full'  m={'30px'}   >
      
   
-    <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
+      <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
       <FormControl isRequired display={'grid'}   gridTemplateColumns='40% 40% '  justifyContent={'space-evenly'} gap='10px'>
         {/** start Hr info */}
 

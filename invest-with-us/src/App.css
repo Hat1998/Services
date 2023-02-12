@@ -5,6 +5,9 @@
   display: table;
  
 }
+.card {
+  border-radius: .7rem;
+}
 .list{
   border: 1px solid #000;
 }

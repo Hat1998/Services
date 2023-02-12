@@ -1,12 +1,14 @@
 import React from "react";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 
 
 function ShowCards() {
+
+  const navigate = useNavigate();
      
   const [data , setData] =React.useState<any[]>([])
   
@@ -47,12 +49,20 @@ function ShowCards() {
 //     )  })
       
 //   }
+
+function goTo(e:any){
+
+  e.data
+  
+}
+
+
   return (
         <div className="Show_cards">
 {showElement?<div className="spinner"> 
 <Spinner
-   boxSize='12rem'
-  thickness='15px'
+   boxSize='5rem'
+  thickness='5px'
   speed='0.65s'
   emptyColor='gray.200'
   color='blue.500'
@@ -64,7 +74,7 @@ function ShowCards() {
 
   {/*companies cards */}
  {/*Grid  cards  Container --------------------------------------------------*/}
- <Box>
+ <Box >
      {/*Start of Grid body */}
     <Grid   templateColumns='repeat(3, 1fr)' border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} mt='60px'  gap={15}> 
     
@@ -99,17 +109,25 @@ function ShowCards() {
           fit="cover"
           src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           alt="avatar"
-        />
+         />
 
-        <Box py={5}  px={5} >
-          <chakra.h1
+         <Flex alignItems="center" px={6} py={3} bg="gray.600">
+
+          <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
+          {item.companyName}
+         
+           </chakra.h1>
+        </Flex>
+
+        <Box py={4} px={6}>
+           <chakra.h1
             display="block"
             fontSize="2xl"
             color="gray.800"
             _dark={{ color: "white" }}
             fontWeight="bold"
           >
-             {item.companyName}
+   
           </chakra.h1>
           <br />
           <chakra.span
@@ -132,9 +150,13 @@ function ShowCards() {
               <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
              
           </chakra.span>
+          <Button mt={'10px'} onClick={()=>{navigate('/details')}}>Details</Button>
+           
         </Box>
       </Box>
     </Flex>
+
+    
     </GridItem>
       )
     })}
