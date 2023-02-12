@@ -111,10 +111,11 @@ function ShowCards() {
           alt="avatar"
         />
 
-        <Flex alignItems="center" px={6} py={3} bg="gray.400">
+        <Flex alignItems="center" px={6} py={3} bg="gray.600">
 
-          <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="lg" >
-          header
+          <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
+          {item.companyName}
+         
            </chakra.h1>
         </Flex>
 
@@ -125,7 +126,7 @@ function ShowCards() {
             color="gray.800"
             _dark={{ color: "white" }}
           >
-             {item.companyName}
+   
           </chakra.h1>
 
           <chakra.p py={2} color="gray.700" _dark={{ color: "gray.400" }}>
