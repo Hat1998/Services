@@ -5,3 +5,6 @@
   display: table;
  
 }
+.card {
+  border-radius: .7rem;
+}

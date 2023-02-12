@@ -28,8 +28,9 @@ import {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box>
+      <Box >
         <Flex
+        
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
@@ -88,7 +89,7 @@ import {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'black'}
+              bg={'#00BFA6'}
               // href={'./comp/Log'}
               _hover={{
                 bg: '#319795',
@@ -258,15 +259,19 @@ import {
   
   const NAV_ITEMS: Array<NavItem> = [
     
-    
+    {
+      label: 'Home',
+      href: '#',
+    },
    
     
+   
     {
-      label: 'About Us',
+      label: 'Contact',
       href: '#',
     },
     {
-      label: 'Contact',
+      label: 'About Us',
       href: '#',
     },
   ];
