@@ -10,14 +10,7 @@ function ShowCards() {
      
   const [data , setData] =React.useState<any[]>([])
   
-  const[firstName, setFirstName]= React.useState('')
-  const[lasttName, setlasttName]= React.useState('')
-  const[email, setEmail]= React.useState('')
-  const[companyName, setCompanyName]= React.useState("")
-  const[photo, setPhoto]= React.useState('')
-
-  const[annualIncome, setAnnualIncome]= React.useState('')
-  const[description, setDescription]= React.useState('')
+   
 
 // to show and hide spinner for 3 sec
   const [showElement,setShowElement] = React.useState(true)
@@ -110,7 +103,7 @@ function ShowCards() {
         <Flex alignItems="center" px={6} py={3} bg="gray.900">
 
           <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg" >
-          
+          {item.companyName}
            </chakra.h1>
         </Flex>
 

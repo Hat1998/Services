@@ -27,11 +27,15 @@ function CompanyHome( ) {
 
 
   return (
-
+    <>
     <Box m={'auto'} width='400px'  display='flex' justifyContent={'center'}>
       <Button flex={1} onClick={()=>getAndNavigate()}>
         Add new</Button>
     </Box>
+
+    
+
+    </>
   )
  
 }
