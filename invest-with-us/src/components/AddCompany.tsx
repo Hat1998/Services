@@ -67,12 +67,10 @@ function AddCompany() {
               })
             );
           });
-      };*/
+      };*/  
 
   return (
-    <Box w='auto' m='auto'mt={'50'}>
-     
-  
+    <Box w={[300, 400, 500]}>
     <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
       <FormControl isRequired display={'grid'}  gridTemplateColumns='40% 40% ' justifyContent={'space-evenly'} gap='10px'>
         <GridItem >
