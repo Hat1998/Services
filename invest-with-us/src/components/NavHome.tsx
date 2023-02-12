@@ -59,6 +59,7 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               fontSize={'25px'}
+              ml={5}
               color={useColorModeValue('gray.800', 'white')}
               
               >
@@ -89,7 +90,7 @@ import {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'#00BFA6'}
+              bg={'green.400'}
               // href={'./comp/Log'}
               _hover={{
                 bg: '#319795',
