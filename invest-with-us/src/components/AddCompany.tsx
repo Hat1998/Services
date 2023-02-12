@@ -1,4 +1,4 @@
-import { Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
+import { Alert,Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
 import {StarIcon} from '@chakra-ui/icons'
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
@@ -33,6 +33,7 @@ function AddCompany() {
       }, []);
         console.log(data)
     function post(){
+   
         axios.post('https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB',{
             firstName,
             lasttName,
@@ -43,7 +44,7 @@ function AddCompany() {
             description,
             location,
             business,
-
+             
         }) 
         axios
         .get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
