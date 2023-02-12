@@ -1,23 +1,18 @@
 import React from "react";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 
 
 function ShowCards() {
+
+  const navigate = useNavigate();
      
   const [data , setData] =React.useState<any[]>([])
   
-  const[firstName, setFirstName]= React.useState('')
-  const[lasttName, setlasttName]= React.useState('')
-  const[email, setEmail]= React.useState('')
-  const[companyName, setCompanyName]= React.useState("")
-  const[photo, setPhoto]= React.useState('')
-
-  const[annualIncome, setAnnualIncome]= React.useState('')
-  const[description, setDescription]= React.useState('')
+   
 
 // to show and hide spinner for 3 sec
   const [showElement,setShowElement] = React.useState(true)
@@ -54,6 +49,14 @@ function ShowCards() {
 //     )  })
       
 //   }
+
+function goTo(e:any){
+
+  e.data
+  
+}
+
+
   return (
         <div className="Show_cards">
 {showElement?<div className="spinner"> 
@@ -71,9 +74,9 @@ function ShowCards() {
 
   {/*companies cards */}
  {/*Grid  cards  Container --------------------------------------------------*/}
- <Box>
+ <Box >
      {/*Start of Grid body */}
-    <Grid templateColumns='repeat(3, 1fr)'borderColor={"blackAlpha.800"} borderRadius={'2xl'}  gap={'0rem'}> 
+    <Grid   templateColumns='repeat(3, 1fr)' border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} mt='60px'  gap={15}> 
     
     {/*Mapping ----------  */}
 
@@ -84,34 +87,31 @@ function ShowCards() {
       
     <GridItem key={item.id}> 
     <Flex
-      
+      bg="#edf3f8"
       _dark={{ bg: "#3e3e3e" }}
-       alignItems="center"
+      p={50}
+      w="full"
+      alignItems="center"
       justifyContent="center"
-       
-        my="2rem"
-      
     >
       <Box
-        w="sm"
-        mx="auto"
+        w="xs"
         bg="white"
         _dark={{ bg: "gray.800" }}
         shadow="lg"
         rounded="lg"
         overflow="hidden"
-        h='lg'
+        mx="auto"
       >
         <Image
           w="full"
           h={56}
           fit="cover"
-          objectPosition="center"
-          src= {item.photo}
+          src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           alt="avatar"
-        />
+         />
 
-        <Flex alignItems="center" px={6} py={3} bg="gray.600">
+         <Flex alignItems="center" px={6} py={3} bg="gray.600">
 
           <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
           {item.companyName}
@@ -120,59 +120,43 @@ function ShowCards() {
         </Flex>
 
         <Box py={4} px={6}>
-          <chakra.h1
-            fontSize="xl"
-            fontWeight="bold"
+           <chakra.h1
+            display="block"
+            fontSize="2xl"
             color="gray.800"
             _dark={{ color: "white" }}
+            fontWeight="bold"
           >
    
           </chakra.h1>
-
-          <chakra.p py={2} color="gray.700" _dark={{ color: "gray.400" }}>
-            {item.description}
-          </chakra.p>
-
-          <Flex
-            alignItems="center"
-            mt={4}
+          <br />
+          <chakra.span
+            fontSize="sm"
             color="gray.700"
             _dark={{ color: "gray.200" }}
           >
-            <Icon as={BsFillBriefcaseFill} h={6} w={6} mr={2} />
+              <chakra.h1 fontSize={'20px'} fontWeight='bold' >conference:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}   >{item.conference}</chakra.h1>
+             
+          </chakra.span>
+          <br />
 
-            <chakra.h1 px={2} fontSize="sm">
-            {item.business}
-            </chakra.h1>
-          </Flex>
-
-          <Flex
-            alignItems="center"
-            mt={4}
+          <chakra.span
+            fontSize="sm"
             color="gray.700"
             _dark={{ color: "gray.200" }}
           >
-            <Icon as={MdLocationOn} h={6} w={6} mr={2} />
-
-            <chakra.h1 px={2} fontSize="sm">
-            {item.email}
-            </chakra.h1>
-          </Flex>
-          <Flex
-            alignItems="center"
-            mt={4}
-            color="gray.700"
-            _dark={{ color: "gray.200" }}
-          >
-            <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-            <chakra.h1 px={2} fontSize="sm">
-            {item.email}
-            </chakra.h1>
-          </Flex>
+         <chakra.h1 fontSize={'20px'} fontWeight='bold' >investment Price:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
+             
+          </chakra.span>
+          <Button mt={'10px'} onClick={()=>{navigate('/details')}}>Details</Button>
+           
         </Box>
       </Box>
     </Flex>
+
+    
     </GridItem>
       )
     })}

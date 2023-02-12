@@ -4,6 +4,7 @@ import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import React from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function AddCompany() {
     const[data, setData]= React.useState<any>([])
@@ -18,10 +19,16 @@ function AddCompany() {
     const[description, setDescription]= React.useState('')
     const[location, setLocation]= React.useState('')
     const[business, setBusiness]= React.useState('')
+    const[sharePrice, setSharePrice]= React.useState('')
+    const[investmentPrice, setInvestmentPrice]= React.useState('')
+    const[conference, setConference]= React.useState('')
+
+
     // const[description, setDescription]= React.useState('')
     // const [photo, setPhoto] = React.useState<any>();
     // const [file, setFile] = useState();
    
+    const navigate = useNavigate()
 
     React.useEffect(() => {
         axios
@@ -41,13 +48,15 @@ function AddCompany() {
             companyName,
             photo,
             annualIncome,
-            description,
             location,
             business,
-             
-        }) 
-        axios
-        .get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
+             sharePrice,
+            description,
+            investmentPrice,
+            conference  
+         }) 
+         axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
+        navigate('/companies', {})
 
 
 
@@ -70,17 +79,19 @@ function AddCompany() {
       };*/  
 
   return (
-    <Box w={[300, 400, 500]}>
-    <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
-      <FormControl isRequired display={'grid'}  gridTemplateColumns='40% 40% ' justifyContent={'space-evenly'} gap='10px'>
+ 
+    <Box w='full'  m={'30px'}   >
+     
+  
+      <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
+      <FormControl isRequired display={'grid'}   gridTemplateColumns='40% 40% '  justifyContent={'space-evenly'} gap='10px'>
+        {/** start Hr info */}
+
+        <Box>
+
         <GridItem >
         <FormLabel>First name</FormLabel>
         <Input placeholder="First name" onChange={e =>{setFirstName(e.target.value)}}/>
-        </GridItem>
-        
-        <GridItem >
-        <FormLabel>Company name</FormLabel>
-        <Input placeholder="Company name" onChange={e =>{setCompanyName(e.target.value)}}/>
         </GridItem>
 
         <GridItem >
@@ -88,19 +99,35 @@ function AddCompany() {
         <Input placeholder="Last name" onChange={e =>{ setlasttName(e.target.value)}} />
         </GridItem>
 
-         <GridItem >
-        <FormLabel>Photo</FormLabel>
-        <Input placeholder="Photo " onChange={e =>{setPhoto(e.target.value)}}/>
-        </GridItem> 
-
         <GridItem >
         <FormLabel>Email</FormLabel>
         <Input placeholder="Email " onChange={e =>{setEmail(e.target.value)}} />
         </GridItem>
+        </Box>
+        {/** End info */}
 
+        
+{/** start company info */}
+        <Box>
+        
+        <GridItem >
+        <FormLabel>Company name</FormLabel>
+        <Input placeholder="Company name" onChange={e =>{setCompanyName(e.target.value)}}/>
+        </GridItem>
+
+        
+
+         <GridItem >
+        <FormLabel>Photo</FormLabel>
+        <Input placeholder="Photo " onChange={e =>{setPhoto(e.target.value)}}/>
+        </GridItem> 
         <GridItem >
         <FormLabel>Annual Income</FormLabel>
         <Input placeholder="Annual Income " onChange={e =>{setAnnualIncome(e.target.value)}}/>
+        </GridItem>
+        <GridItem >
+        <FormLabel>Share Price</FormLabel>
+        <Input placeholder="Share Price" onChange={e =>{setSharePrice(e.target.value)}}/>
         </GridItem>
         <GridItem >
         <FormLabel>Location</FormLabel>
@@ -110,6 +137,19 @@ function AddCompany() {
         <FormLabel>Business Area</FormLabel>
         <Input placeholder="Business Area" onChange={e =>{setBusiness(e.target.value)}}/>
         </GridItem>
+        <GridItem >
+        <FormLabel>Investment Price</FormLabel>
+        <Input placeholder="Investment Price" onChange={e =>{setInvestmentPrice(e.target.value)}}/>
+        </GridItem>
+        <GridItem >
+        <FormLabel>Conference</FormLabel>
+        <Input placeholder="Conference" onChange={e =>{setConference(e.target.value)}}/>
+        </GridItem>
+        
+        </Box>
+
+        {/** End company info */}
+
         {/* <input type="file"onChange={e => setFile(URL.createObjectURL(e.target.files[0]))} />
             <img src={file} /> */}
       </FormControl>
