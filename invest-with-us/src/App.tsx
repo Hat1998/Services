@@ -1,21 +1,31 @@
 import { useState } from 'react'
 import HomePage from './components/HomePage'
-import Show from './components/Show';
+import Show from './components/ShowCards';
 
 import './App.css'
- import { Box } from '@chakra-ui/react';
-import { Routes,Route } from 'react-router-dom';
-import AddCompany from './components/AddCompany';
-import CompanyHome from './components/CompanyHome'
+import AddCompany from './components/AddCompany'
+import ShowCards from './components/ShowCards';
+import CompanyHome from './components/CompanyHome';
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
  
   return (
     <div className="App">
-       <CompanyHome/>
-       <Routes>
-        <Route path='/add' element={< AddCompany/>}/>
-       </Routes>
+      {/* <HomePage/>
 
+      <AddCompany/> */}
+
+      <Routes>
+        <Route path='/add' element={ <AddCompany/>}/>
+        <Route path='/companies' element={ <CompanyHome/>}/>
+        <Route path='/show' element={<ShowCards/>}/>
+      </Routes>
+      
+       
+
+      {/* <Show/> */}
+      
       </div>
 
 
