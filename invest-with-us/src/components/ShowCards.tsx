@@ -58,8 +58,8 @@ function ShowCards() {
         <div className="Show_cards">
 {showElement?<div className="spinner"> 
 <Spinner
-   boxSize='12rem'
-  thickness='15px'
+   boxSize='5rem'
+  thickness='5px'
   speed='0.65s'
   emptyColor='gray.200'
   color='blue.500'
