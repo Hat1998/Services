@@ -70,8 +70,8 @@ function AddCompany() {
       };*/  
 
   return (
-    <Box w={[300, 400, 500]}>
-    <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
+    <Box p={0}>
+    <Grid  w={'full'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
       <FormControl isRequired display={'grid'}  gridTemplateColumns='40% 40% ' justifyContent={'space-evenly'} gap='10px'>
         <GridItem >
         <FormLabel>First name</FormLabel>
@@ -117,7 +117,7 @@ function AddCompany() {
         <FormLabel>Description</FormLabel>
         <Textarea placeholder="Description..." onChange={e =>{setDescription(e.target.value)}} />
         </Box>
-      <Button bg={"lightgreen"} color={"white"} fontSize={30} onClick={post}>Create</Button>
+      <Button bg={"lightgreen"} color={"white"} fontSize={25} onClick={post}>Create</Button>
      {/* <Button bg={"lightgreen"} onClick={()=>{DeleteItems}}>delete</Button> */}
 
     </Grid>
