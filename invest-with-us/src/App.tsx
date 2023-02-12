@@ -1,23 +1,29 @@
 import { useState } from 'react'
-
-import './App.css'
 import HomePage from './components/HomePage'
 import Show from './components/Show';
 
-function App() {
+import './App.css'
+import AddCompany from './components/AddCompany'
 
+function App() {
+ 
   return (
     <div className="App">
+      <HomePage/>
 
+      <AddCompany/>
 
+      </div>
 
-<HomePage/>
 
 
 {/* <Show/> */}
+)
 
-    </div>
-  )
-}
+ }
+
+
+
 
 export default App;
+
