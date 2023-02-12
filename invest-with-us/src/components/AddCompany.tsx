@@ -74,6 +74,7 @@ function AddCompany() {
       };*/
 
   return (
+
     <Box w='full'  m={'30px'}   >
      
   
@@ -82,6 +83,7 @@ function AddCompany() {
         {/** start Hr info */}
 
         <Box>
+
         <GridItem >
         <FormLabel>First name</FormLabel>
         <Input placeholder="First name" onChange={e =>{setFirstName(e.target.value)}}/>

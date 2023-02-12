@@ -103,7 +103,7 @@ function ShowCards() {
         <Flex alignItems="center" px={6} py={3} bg="gray.900">
 
           <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg" >
-          {item.companyName}
+              {item.companyName}
            </chakra.h1>
         </Flex>
 
