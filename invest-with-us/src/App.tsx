@@ -3,24 +3,20 @@ import HomePage from './components/HomePage'
 import Show from './components/Show';
 
 import './App.css'
- import CompanyHome from './components/CompanyHome';
-import { Box } from '@chakra-ui/react';
+ import { Box } from '@chakra-ui/react';
 import { Routes,Route } from 'react-router-dom';
 import AddCompany from './components/AddCompany';
-
+import CompanyHome from './components/CompanyHome'
 function App() {
  
   return (
-    <Box className="App" >
+    <div className="App">
+       <CompanyHome/>
+       <Routes>
+        <Route path='/add' element={< AddCompany/>}/>
+       </Routes>
 
-     
-      <CompanyHome/>
-      <Routes>
-        <Route path='/AddCompany' element={<AddCompany/>}/>
-      </Routes>
-       
-
-      </Box>
+      </div>
 
 
 
@@ -28,4 +24,8 @@ function App() {
 
  }
 
- export default App;
+
+
+
+export default App;
+
