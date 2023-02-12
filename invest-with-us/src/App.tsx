@@ -13,11 +13,11 @@ function App() {
 
       <AddCompany/>
 
+      {/* <Show/> */}
       </div>
 
 
 
-{/* <Show/> */}
 )
 
  }
