@@ -20,6 +20,9 @@ function AddCompany() {
     const[location, setLocation]= React.useState('')
     const[business, setBusiness]= React.useState('')
     const[sharePrice, setSharePrice]= React.useState('')
+    const[investmentPrice, setInvestmentPrice]= React.useState('')
+    const[conference, setConference]= React.useState('')
+
 
     // const[description, setDescription]= React.useState('')
     // const [photo, setPhoto] = React.useState<any>();
@@ -47,7 +50,9 @@ function AddCompany() {
             location,
             business,
             sharePrice,
-            description
+            description,
+            investmentPrice,
+            conference
 
 
         }) 
@@ -122,7 +127,7 @@ function AddCompany() {
         </GridItem>
         <GridItem >
         <FormLabel>Share Price</FormLabel>
-        <Input placeholder="Share Price" onChange={e =>{setBusiness(e.target.value)}}/>
+        <Input placeholder="Share Price" onChange={e =>{setSharePrice(e.target.value)}}/>
         </GridItem>
         <GridItem >
         <FormLabel>Location</FormLabel>
@@ -131,6 +136,14 @@ function AddCompany() {
         <GridItem >
         <FormLabel>Business Area</FormLabel>
         <Input placeholder="Business Area" onChange={e =>{setBusiness(e.target.value)}}/>
+        </GridItem>
+        <GridItem >
+        <FormLabel>Investment Price</FormLabel>
+        <Input placeholder="Investment Price" onChange={e =>{setInvestmentPrice(e.target.value)}}/>
+        </GridItem>
+        <GridItem >
+        <FormLabel>Conference</FormLabel>
+        <Input placeholder="Conference" onChange={e =>{setConference(e.target.value)}}/>
         </GridItem>
         
         </Box>

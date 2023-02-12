@@ -77,87 +77,61 @@ function ShowCards() {
       
     <GridItem key={item.id}> 
     <Flex
-      
+      bg="#edf3f8"
       _dark={{ bg: "#3e3e3e" }}
-       alignItems="center"
+      p={50}
+      w="full"
+      alignItems="center"
       justifyContent="center"
     >
       <Box
-        w="sm"
-        mx="auto"
+        w="xs"
         bg="white"
         _dark={{ bg: "gray.800" }}
         shadow="lg"
         rounded="lg"
         overflow="hidden"
+        mx="auto"
       >
         <Image
           w="full"
           h={56}
           fit="cover"
-          objectPosition="center"
-          src= {item.photo}
+          src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           alt="avatar"
         />
 
-        <Flex alignItems="center" px={6} py={3} bg="gray.900">
-
-          <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg" >
-              {item.companyName}
-           </chakra.h1>
-        </Flex>
-
-        <Box py={4} px={6}>
+        <Box py={5}  px={5} >
           <chakra.h1
-            fontSize="xl"
-            fontWeight="bold"
+            display="block"
+            fontSize="2xl"
             color="gray.800"
             _dark={{ color: "white" }}
+            fontWeight="bold"
           >
              {item.companyName}
           </chakra.h1>
-
-          <chakra.p py={2} color="gray.700" _dark={{ color: "gray.400" }}>
-            {item.description}
-          </chakra.p>
-
-          <Flex
-            alignItems="center"
-            mt={4}
+          <br />
+          <chakra.span
+            fontSize="sm"
             color="gray.700"
             _dark={{ color: "gray.200" }}
           >
-            <Icon as={BsFillBriefcaseFill} h={6} w={6} mr={2} />
+              <chakra.h1 fontSize={'20px'} fontWeight='bold' >conference:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}   >{item.conference}</chakra.h1>
+             
+          </chakra.span>
+          <br />
 
-            <chakra.h1 px={2} fontSize="sm">
-            {item.business}
-            </chakra.h1>
-          </Flex>
-
-          <Flex
-            alignItems="center"
-            mt={4}
+          <chakra.span
+            fontSize="sm"
             color="gray.700"
             _dark={{ color: "gray.200" }}
           >
-            <Icon as={MdLocationOn} h={6} w={6} mr={2} />
-
-            <chakra.h1 px={2} fontSize="sm">
-            {item.email}
-            </chakra.h1>
-          </Flex>
-          <Flex
-            alignItems="center"
-            mt={4}
-            color="gray.700"
-            _dark={{ color: "gray.200" }}
-          >
-            <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-            <chakra.h1 px={2} fontSize="sm">
-            {item.email}
-            </chakra.h1>
-          </Flex>
+         <chakra.h1 fontSize={'20px'} fontWeight='bold' >investment Price:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
+             
+          </chakra.span>
         </Box>
       </Box>
     </Flex>
