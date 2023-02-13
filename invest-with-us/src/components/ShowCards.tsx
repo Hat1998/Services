@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import { Link , useNavigate} from "react-router-dom";
-import { Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
+import { SimpleGrid,Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 
@@ -76,7 +76,7 @@ function goTo(e:any){
  {/*Grid  cards  Container --------------------------------------------------*/}
  <Box >
      {/*Start of Grid body */}
-    <Grid   templateColumns='repeat(3, 1fr)' border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} mt='60px'  gap={15}> 
+    <SimpleGrid  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} mt='auto'  gap={15}  columns={{ base: 1, md: 2, lg: 3 }}> 
     
     {/*Mapping ----------  */}
 
@@ -89,8 +89,9 @@ function goTo(e:any){
     <Flex
       bg="#edf3f8"
       _dark={{ bg: "#3e3e3e" }}
-      p={50}
-      w="full"
+      p={5}
+      w="md"
+      h={"lx"}
       alignItems="center"
       justifyContent="center"
     >
@@ -102,6 +103,8 @@ function goTo(e:any){
         rounded="lg"
         overflow="hidden"
         mx="auto"
+        h={"lg"}
+      
       >
         <Image
           w="full"
@@ -109,9 +112,10 @@ function goTo(e:any){
           fit="cover"
           src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           alt="avatar"
+          rounded="lg"
          />
 
-         <Flex alignItems="center" px={6} py={3} bg="gray.600">
+         <Flex alignItems="center" px={6} py={3} bg="gray.600" >
 
           <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
           {item.companyName}
@@ -129,28 +133,28 @@ function goTo(e:any){
           >
    
           </chakra.h1>
-          <br />
+    
           <chakra.span
             fontSize="sm"
             color="gray.700"
             _dark={{ color: "gray.200" }}
           >
-              <chakra.h1 fontSize={'20px'} fontWeight='bold' >conference:</chakra.h1>
+              <chakra.h1 fontSize={'18px'} fontWeight='bold' >conference:</chakra.h1>
               <chakra.h1 fontSize={'18px'}   >{item.conference}</chakra.h1>
              
           </chakra.span>
-          <br />
+       
 
           <chakra.span
-            fontSize="sm"
+            fontSize="md"
             color="gray.700"
             _dark={{ color: "gray.200" }}
           >
-         <chakra.h1 fontSize={'20px'} fontWeight='bold' >investment Price:</chakra.h1>
+         <chakra.h1 fontSize={'18px'} fontWeight='bold' >investment Price:</chakra.h1>
               <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
              
           </chakra.span>
-          <Button mt={'10px'} onClick={()=>{navigate('/details')}}>Details</Button>
+          <Button onClick={()=>{navigate('/details')}}>Details</Button>
            
         </Box>
       </Box>
@@ -164,7 +168,7 @@ function goTo(e:any){
 
 
  
-    </Grid>
+    </SimpleGrid>
 
     
     

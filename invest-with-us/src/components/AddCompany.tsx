@@ -97,7 +97,7 @@ function AddCompany() {
 
     
  
-    <Box w='full'  m={'30px'}   >
+    <Box w='full' >
      
   
       <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
