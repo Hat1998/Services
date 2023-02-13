@@ -14,11 +14,11 @@ function HomePage() {
 
 
 
-    <Box bgImage={'https://c.top4top.io/p_260026l1s1.png'} >
-    <SimpleGrid columns={2} spacing={500} 
+<Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='700' >
+    <SimpleGrid columns={2} spacingX={1000} 
   
 textAlign={'left'}>
-  <Box boxSize='3xl' mt={120}>
+  <Box boxSize='3xl' mx={"180"} my={"15rem"}>
     <Text
      fontSize='3xl'
     color={'black'}
@@ -30,7 +30,7 @@ textAlign={'left'}>
  rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
 Join now  </Button>
     </Box>
-<Box boxSize='md'>
+<Box boxSize='md' my={"5rem"}>
   <Image 
   w={'full'}
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
@@ -43,7 +43,7 @@ Join now  </Button>
 
 
  <Box
-textAlign={'center'}      ><Text
+textAlign={'center'} ><Text
       
       fontSize='3xl'
       as='b'
