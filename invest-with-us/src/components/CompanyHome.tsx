@@ -3,6 +3,7 @@ import React from 'react'
 import {useNavigate, Link} from "react-router-dom"
 import axios from "axios"
 import Show from './Show'
+import ShowCards from './ShowCards'
 
  
 
@@ -29,12 +30,12 @@ function CompanyHome( ) {
 
   return (
     <>
-    <Box m={'auto'} width='400px'  display='flex' justifyContent={'center'}>
-      <Button flex={1} onClick={()=>getAndNavigate()}>
-        Add new</Button>
+    <Box mx={''} width='100px'  display='block' justifyContent={'start'}>
+      <Button flex={1} bg={'green.200'} color='#fff' onClick={()=>getAndNavigate()}>
+        Add New</Button>
     </Box>
 
-    
+    {/* this how */}
 <Show/>
     </>
   )

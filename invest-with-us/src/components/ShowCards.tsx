@@ -76,7 +76,7 @@ function goTo(e:any){
  {/*Grid  cards  Container --------------------------------------------------*/}
  <Box >
      {/*Start of Grid body */}
-    <SimpleGrid  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} mt='auto'  gap={15}  columns={{ base: 1, md: 2, lg: 3 }}> 
+    <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto' gap={15}  columns={{ base: 1, md: 2, lg: 3 }}> 
     
     {/*Mapping ----------  */}
 
@@ -88,6 +88,7 @@ function goTo(e:any){
     <GridItem key={item.id}> 
     <Flex
       bg="#edf3f8"
+      rounded="lg"
       _dark={{ bg: "#3e3e3e" }}
       p={5}
       w="md"
