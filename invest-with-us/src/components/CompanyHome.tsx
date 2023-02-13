@@ -15,6 +15,7 @@ function CompanyHome( ) {
 
     function getAndNavigate(){
         navigate("/add")
+      
         React.useEffect(() => {
             axios
                   .get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
