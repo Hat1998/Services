@@ -45,7 +45,7 @@ function AddCompany() {
           axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
               setData(data.filter((show: { id: any; })=>{
               console.log(res);
-              return show.id!=id
+              return show.id==id
       })
         )  })
           
@@ -69,7 +69,13 @@ function AddCompany() {
             investmentPrice,
             conference  
          }) 
+localStorage.setItem('id',id)
 localStorage.setItem('companyName',companyName)
+localStorage.setItem('photo',photo)
+localStorage.setItem('conference',conference)
+localStorage.setItem('annualIncome',annualIncome)
+localStorage.setItem('investmentPrice',investmentPrice)
+localStorage.setItem('companyName',business)
 
          
          axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
