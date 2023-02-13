@@ -1,3 +1,7 @@
+import { Link as ReachLink } from "react-router-dom"
+
+
+
 import {
     Box,
     Flex,
@@ -64,7 +68,7 @@ import {
               
               >
                 
-              Experience <br></br> Saudi 
+                Conferences  <br></br> Investment 
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -85,18 +89,21 @@ import {
               href={''}>
               Sign In
             </Button>
+
+            <Link as={ReachLink} to='/SingUp'>
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
               bg={'green.400'}
-              // href={'./comp/Log'}
               _hover={{
                 bg: '#319795',
               }}>
               Sign Up
             </Button>
+</Link>
+            
           </Stack>
         </Flex>
   

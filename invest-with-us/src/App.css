@@ -11,3 +11,8 @@
 .list{
   border: 1px solid #000;
 }
+@media (min-width: 1025px) {
+  .h-custom-2 {
+    height: 100%;
+    }
+  }
