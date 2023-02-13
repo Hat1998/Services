@@ -22,15 +22,11 @@ function App() {
           <MDBRow>
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up </p>
+              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
               <div className="d-flex flex-row align-items-center mb-4 ">
                 <MDBIcon fas icon="user me-3" size='lg'/>
                 <MDBInput label='Your Name' id='form1' type='text' className='w-100'/>
-              </div>
-              <div className="d-flex flex-row align-items-center mb-4 ">
-                <MDBIcon fas icon="building me-3" size='lg'/>
-                <MDBInput label='Your Company' id='form1' type='text' className='w-100'/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
@@ -57,7 +53,7 @@ function App() {
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
-              <MDBCardImage src='https://j.top4top.io/p_2600burl71.png' fluid/>
+              <MDBCardImage src='https://a.top4top.io/p_2600yjplt1.png' fluid/>
             </MDBCol>
 
           </MDBRow>
