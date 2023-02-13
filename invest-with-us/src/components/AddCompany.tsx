@@ -185,11 +185,11 @@ localStorage.setItem('companyName',business)
         {/* <input type="file"onChange={e => setFile(URL.createObjectURL(e.target.files[0]))} />
             <img src={file} /> */}
       </FormControl>
-      <Box   >
+      {/* <Box   >
         <FormLabel>Description</FormLabel>
         <Textarea placeholder="Description About Your Work" onChange={e =>{setDescription(e.target.value)}} />
         </Box>
-     
+      */}
       <Button mt={5} w={100} mx='auto'bg={"lightgreen"} color={"white"} fontSize={25} onClick={post} >Create</Button>
      {/* <Button bg={"lightgreen"} onClick={()=>{DeleteItems}}>delete</Button> */}
 
