@@ -34,7 +34,8 @@ export default function Home3(){
         >
           <Box>
             <chakra.h2
-              mb={4}
+            mt={50}
+              mb={10}
               fontSize={{ base: "2xl", md: "4xl" }}
               fontWeight="extrabold"
               letterSpacing="tight"
@@ -44,7 +45,7 @@ export default function Home3(){
               lineHeight={{ md: "shorter" }}
               
             >
-                 Open your mind!
+                 For Companies
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -53,7 +54,7 @@ export default function Home3(){
               _dark={{ color: "gray.400" }}
               fontSize={{ md: "lg" }}
             >
-        From celebrating art at the Louvre to exploring presidential palaces, your cultural journey in Sudai will leave you amazed.
+        Companies that invest in conferences can add and display investment details easily so that investors can reach them.
 <hr></hr>
 <br></br>
 <br></br>
@@ -78,7 +79,7 @@ export default function Home3(){
         >
           <Box order={{ base: "initial", md: 2 }}>
             <chakra.h2
-              mb={4}
+              mb={10}
               fontSize={{ base: "2xl", md: "4xl" }}
               fontWeight="extrabold"
               letterSpacing="tight"
@@ -90,7 +91,7 @@ export default function Home3(){
 Chase thrills
             </chakra.h2>
             <chakra.p
-              mb={5}
+              mb={400}
               textAlign={{ base: "center", sm: "left" }}
               color="gray.600"
               _dark={{ color: "gray.400" }}
