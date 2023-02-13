@@ -56,7 +56,7 @@ export default function CaptionCarousel() {
 
   return (
     <Box
-    p={'2px'}
+    
 
       position={'relative'}
       height={'500px'}
@@ -94,7 +94,7 @@ textAlign={'center'}      ><Text
           <Box
           
             key={index}
-            height={'180px'}
+            height={'150px'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"

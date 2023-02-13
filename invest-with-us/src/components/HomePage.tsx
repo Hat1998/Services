@@ -14,12 +14,12 @@ function HomePage() {
 
 
     
-    <SimpleGrid columns={2} spacing={'25rem'} m='170px'mt={20}
+    <SimpleGrid columns={2} spacing={500} m='170px'mt={20}
     mb={0}
 textAlign={'left'}>
-  <Box boxSize='5xl' mt={140}>
+  <Box boxSize='3xl' mt={120}>
     <Text
-     fontSize='4xl'
+     fontSize='3xl'
     color={'black'}
     
     >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
@@ -29,7 +29,7 @@ textAlign={'left'}>
  rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
 Join now  </Button>
     </Box>
-<Box boxSize='xl'>
+<Box boxSize='md'>
   <Image 
   w={'full'}
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
