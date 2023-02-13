@@ -5,6 +5,7 @@ import React from 'react'
 import NavHome from './NavHome'
 import ClientsHome from './ClientsHome'
 import FooterHome from './FooterHome'
+import OurServices from './OurServices'
 
 function HomePage() {
   return (
@@ -13,9 +14,9 @@ function HomePage() {
 
 
 
-    
-    <SimpleGrid columns={2} spacing={500} m='170px'mt={20}
-    mb={0}
+    <Box bgImage={'https://c.top4top.io/p_260026l1s1.png'} >
+    <SimpleGrid columns={2} spacing={500} 
+  
 textAlign={'left'}>
   <Box boxSize='3xl' mt={120}>
     <Text
@@ -36,10 +37,24 @@ Join now  </Button>
 </Box>  
 </SimpleGrid>
    
- 
+ </Box>
+  
+
+
+
+ <Box
+textAlign={'center'}      ><Text
+      
+      fontSize='3xl'
+      as='b'
+      >Our Services & Solutions
+
+      </Text>
+  <OurServices/></Box>
 
     <Box>
     <ClientsHome/>
+    </Box>
     <section style={{color: "#000"}}>
   <div className="container py-5">
     <div className="row d-flex justify-content-center">
@@ -159,7 +174,7 @@ Join now  </Button>
 </section>
 
 
-    </Box>
+   
     <FooterHome/>
     </div>
   )
