@@ -5,7 +5,6 @@ function CardDetails(props:any) {
   return (
     <Box>
 
-        
       
     </Box>
   )
