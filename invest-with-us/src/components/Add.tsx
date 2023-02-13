@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import Show from './Show'
+
 
 function Add() {
     const [task , setTask] = React.useState("")
@@ -27,7 +27,7 @@ const PostData = ()=>{
       
         <input placeholder='Add' onChange={e =>{setTask(e.target.value)}}></input>
         <button onClick={PostData}>add new</button>
-        <Show/>
+ 
     </div>
 
   )

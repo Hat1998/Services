@@ -2,6 +2,7 @@ import { Box, Button } from '@chakra-ui/react'
 import React from 'react'
 import {useNavigate, Link} from "react-router-dom"
 import axios from "axios"
+import Show from './Show'
 
  
 
@@ -27,11 +28,15 @@ function CompanyHome( ) {
 
 
   return (
-
+    <>
     <Box m={'auto'} width='400px'  display='flex' justifyContent={'center'}>
       <Button flex={1} onClick={()=>getAndNavigate()}>
         Add new</Button>
     </Box>
+
+    
+<Show/>
+    </>
   )
  
 }
