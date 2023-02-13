@@ -1,26 +1,29 @@
 import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-function CompanySingUp() {
+function SingUp() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <div>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button  bg={"green.400"} color={'#fff'}onClick={onOpen}>Sing Up</Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+        <ModalContent w={'full'} h={'md'}  >
+          <ModalHeader mx={'auto'} my={'25'}>Do you want to register as ?</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
+          <ModalBody >
            
           </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
+          <ModalFooter mx={'auto'} >
+          <Link to='/SingUp'>  <Button bg={"green.400"} color='#fff' mr={3}>
+          Company
             </Button>
-            <Button variant='ghost'>Secondary Action</Button>
+            </Link>
+            <Link to='/InvestorSingUp'>  <Button bg={"gray.300"}>Investor</Button>
+            </Link>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -30,4 +33,4 @@ function CompanySingUp() {
   )
 }
 
-export default CompanySingUp;
+export default SingUp;
