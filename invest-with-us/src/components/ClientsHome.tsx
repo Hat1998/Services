@@ -42,20 +42,22 @@ export default function CaptionCarousel() {
     {
      
       image:
-        'https://e.top4top.io/p_2598s9r5o1.png',
+        'https://l.top4top.io/p_2599tjjnk1.png',
         
         
     },
     {
       
       image:
-        'https://h.top4top.io/p_2598r16ar1.png',
+        'https://i.top4top.io/p_2599b74a21.png',
     },
   
   ];
 
   return (
     <Box
+    
+
       position={'relative'}
       height={'500px'}
       width={'full'}
@@ -74,21 +76,25 @@ export default function CaptionCarousel() {
       />
      
       {/* Slider */}
-      <Text
-      m={5}
-      ml={10}
+      <Box
+textAlign={'center'}      ><Text
+      
       fontSize='3xl'
       as='b'
       >Our Clients
-      
       </Text>
+      
+      
+      </Box>
+            <br></br>
+
+      
       <Slider {...settings} ref={(slider: any) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box
           
-
             key={index}
-            height={'180px'}
+            height={'150px'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"

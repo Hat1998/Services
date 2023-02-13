@@ -39,6 +39,18 @@ function AddCompany() {
           });
       }, []);
         console.log(data)
+
+        const show= (id:any)=>{
+          console.log(id);
+          axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
+              setData(data.filter((show: { id: any; })=>{
+              console.log(res);
+              return show.id!=id
+      })
+        )  })
+          
+      }
+      
     function post(){
    
         axios.post('https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB',{
@@ -55,14 +67,17 @@ function AddCompany() {
             investmentPrice,
             conference  
          }) 
+         
          axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
+        
+         show(localStorage.getItem("id"));
         navigate('/companies', {})
 
 
 
     }
 
-    
+  
 
  
 
@@ -79,8 +94,10 @@ function AddCompany() {
       };*/  
 
   return (
+
+    
  
-    <Box w='full'  m={'30px'}   >
+    <Box w='full' >
      
   
       <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
@@ -88,6 +105,7 @@ function AddCompany() {
         {/** start Hr info */}
 
         <Box>
+
 
         <GridItem >
         <FormLabel>First name</FormLabel>
@@ -157,7 +175,8 @@ function AddCompany() {
         <FormLabel>Description</FormLabel>
         <Textarea placeholder="Description..." onChange={e =>{setDescription(e.target.value)}} />
         </Box>
-      <Button bg={"lightgreen"} color={"white"} fontSize={30} onClick={post}>Create</Button>
+     
+      <Button bg={"lightgreen"} color={"white"} fontSize={25} onClick={post} >Create</Button>
      {/* <Button bg={"lightgreen"} onClick={()=>{DeleteItems}}>delete</Button> */}
 
     </Grid>

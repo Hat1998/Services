@@ -9,8 +9,11 @@ import {
   VisuallyHidden,
   chakra,
   useColorModeValue,
+  Input,
+  IconButton,
 } from '@chakra-ui/react';
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { BiMailSend } from 'react-icons/bi';
 
 // import AppStoreBadge from '@/components/AppStoreBadge';
 // import PlayStoreBadge from '@/components/PlayStoreBadge';
@@ -83,12 +86,31 @@ export default function LargeWithAppLinksAndSocial() {
             <Link href={'#'}>Terms of Service</Link>
             <Link href={'#'}>Law Enforcement</Link>
           </Stack>
-
           <Stack align={'flex-start'}>
-            {/* <ListHeader>Install App</ListHeader>
-            <AppStoreBadge />
-            <PlayStoreBadge /> */}
-          </Stack>
+            <ListHeader>Stay up to date</ListHeader>
+            <Stack direction={'row'}>
+              <Input
+                placeholder={'Your email address'}
+                bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+                border={0}
+                _focus={{
+                  bg: 'whiteAlpha.300',
+                }}
+              />
+              <IconButton
+                bg={useColorModeValue('green.400', 'green.800')}
+                color={useColorModeValue('white', 'gray.800')}
+                _hover={{
+                  bg: 'green.600',
+                }}
+                aria-label="Subscribe"
+                icon={<BiMailSend />}
+              />
+                        </Stack>
+
+            </Stack>
+
+
         </SimpleGrid>
       </Container>
 

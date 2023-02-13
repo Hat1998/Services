@@ -12,18 +12,22 @@ function App() {
  
   return (
     <div className="App">
-       {/* <HomePage/>
+       <HomePage/> 
 
-      <AddCompany/> */}
-
-      <Routes>
+    {/* <AddCompany/>  */}
+      {/* <Routes>
         <Route path='/add' element={ <AddCompany/>}/>
         <Route path='/companies' element={ <CompanyHome/>}/>
         <Route path='/show' element={<ShowCards/>}/>
+<<<<<<< HEAD
         <Route path='/card-details' element={<CardDetails/>}/>
+=======
+      </Routes>  */}
+      
+        {/* <Route path='/details' element={<CardDetails/>}/>
 
       </Routes>
-      
+       */}
     </div>   
  )
  }
