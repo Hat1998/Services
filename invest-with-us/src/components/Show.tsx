@@ -18,14 +18,14 @@ function Show() {
    setData(res.data)
    })
     },[]) 
-
-const UpdateItam=(id:any) => {
-  console.log(id);
-  axios.put(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${'id'}`)
-}
+    let id =(localStorage.getItem('id'));
+// const UpdateItam=(id:any) => {
+//   console.log(id);
+//   axios.put(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${'id'}`)
+// }
     const DeleteItems= (id:any)=>{
         console.log(id);
-        axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${'id'}`).then(res=>{
+        axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
             setData(data.filter((del)=>{
             console.log(res);
             return del.id!=id
@@ -147,6 +147,8 @@ const UpdateItam=(id:any) => {
           {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
            
     {/* <Button bg={"red"} color='#fff' m={2} onClick={()=>Dlelete}>Deleteaa</Button> */}
+
+    {/* Alet----------------------------- */}
     <Button mr={5} onClick={open}>
        Delete
       </Button>
@@ -175,6 +177,8 @@ const UpdateItam=(id:any) => {
         </PopoverContent>
       </Popover>
     <Link to="/update"><Button bg={'green.100'}>Update</Button></Link>
+    
+    {/* Alet----------------------------- */}
         </Box>
       </Box>
     </Flex>
