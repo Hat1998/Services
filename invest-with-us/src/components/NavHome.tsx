@@ -82,7 +82,9 @@ import SingUp from "./SingUp";
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
+
+<Link as={ReachLink} to='/LogIn'>
+<Button
               as={'a'}
               fontSize={'md'}
               fontWeight={400}
@@ -90,6 +92,8 @@ import SingUp from "./SingUp";
               href={''}>
               Sign In
             </Button>
+</Link>
+           
               <SingUp/>
 
            
