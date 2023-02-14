@@ -6,9 +6,9 @@ import Show from "./Show";
 import ShowCards from "./ShowCards";
 
 function CompanyHome() {
-  const [data, setData] = React.useState<any>([]);
-
-  const navigate = useNavigate();
+    const[data, setData]= React.useState<any>([])
+     
+    const navigate = useNavigate();
 
   function getAndNavigate() {
     navigate("/add");

@@ -33,7 +33,9 @@ import SingUp from "./SingUp";
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box >
+      // this is make the nav fixed
+      // position="fixed" zIndex={50}
+      <Box  w={'full'} mx={'auto'} >
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}
@@ -44,7 +46,9 @@ import SingUp from "./SingUp";
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}>
+          align={'center'}
+    
+          >
           <Flex
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}

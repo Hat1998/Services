@@ -1,4 +1,4 @@
-import { Alert,Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
+import { Alert,Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button, Heading, Divider} from "@chakra-ui/react";
 import {StarIcon} from '@chakra-ui/icons'
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
@@ -10,7 +10,7 @@ function AddCompany() {
     const[data, setData]= React.useState<any>([])
     const [id, setId] = React.useState<any>("");
     const[firstName, setFirstName]= React.useState('')
-    const[lasttName, setlasttName]= React.useState('')
+    const[jog, setjob]= React.useState('')
     const[email, setEmail]= React.useState('')
     const[companyName, setCompanyName]= React.useState("")
     const[photo, setPhoto]= React.useState('')
@@ -57,7 +57,7 @@ function AddCompany() {
 // localStorage.setItem('')
         axios.post('https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB',{
             firstName,
-            lasttName,
+            jog,
             email,
             companyName,
             photo,
@@ -67,7 +67,7 @@ function AddCompany() {
              sharePrice,
             description,
             investmentPrice,
-            conference  
+            conference  ,
          }) 
 localStorage.setItem('id',id)
 localStorage.setItem('companyName',companyName)
@@ -106,29 +106,33 @@ localStorage.setItem('companyName',business)
 
     
  
-    <Box w='full' h='full' my={'auto'}>
+    <Box w='full' h='full' my={'auto'} p={5} >
      
   
-      <Grid  w={'35rem'} p={50}  border= '1px'  borderColor={"blackAlpha.200"} borderRadius={'xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 2fr)' >
-      <FormControl isRequired display={'grid'}   gridTemplateColumns='45% 45% '  justifyContent={'space-around'} >
+      <Grid  w={'full'} p={10}  border= '1px'  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx={'auto'} shadow={'xl'} rounded={'xl'}  h='auto' templateColumns='repeat(1, 2fr)' >
+      <FormControl isRequired display={'grid'}  gap={"50"}  gridTemplateColumns='45% 45% '  justifyContent={'space-around'}  >
               
 {/** start company info */}
 <Box >
-        
+<Heading as='h2' size='md' mb={3} color={'gray.400'}>
+Company Information:
+  </Heading>
+  
         <GridItem >
         <FormLabel>Company Name</FormLabel>
         <Input placeholder="Tuwaiq Academy" onChange={e =>{setCompanyName(e.target.value)}}/>
         </GridItem>
-
-        
-
+        <GridItem >
+        <FormLabel>Conference</FormLabel>
+        <Input placeholder="LAEP or Apple" onChange={e =>{setConference(e.target.value)}}/>
+        </GridItem>
          <GridItem >
-        <FormLabel>Photo URL</FormLabel>
+        <FormLabel>Photo URL Of The Company</FormLabel>
         <Input placeholder="www.Photo.png" onChange={e =>{setPhoto(e.target.value)}}/>
         </GridItem> 
         <GridItem >
         <FormLabel>Annual Income</FormLabel>
-        <Input placeholder="1B SAR " onChange={e =>{setAnnualIncome(e.target.value)}}/>
+        <Input placeholder="1 B SAR " onChange={e =>{setAnnualIncome(e.target.value)}}/>
         </GridItem>
         <GridItem >
         <FormLabel>Share Price</FormLabel>
@@ -146,37 +150,38 @@ localStorage.setItem('companyName',business)
         <FormLabel>Investment Price</FormLabel>
         <Input placeholder="Investment Price" onChange={e =>{setInvestmentPrice(e.target.value)}}/>
         </GridItem>
-        <GridItem >
-        <FormLabel>Conference</FormLabel>
-        <Input placeholder="LAEP or Apple" onChange={e =>{setConference(e.target.value)}}/>
-        </GridItem>
-        
+        <Box >
+        <FormLabel>Description</FormLabel>
+        <Textarea placeholder="Description About Your Work" onChange={e =>{setDescription(e.target.value)}} />
+        </Box>
         </Box>
 
         {/** End company info */}
+       
         {/** start Hr info */}
+     
 
         <Box>
-
+          
+        <Heading as='h2' size='md' mb={3} color={'gray.400'}>
+        Employee Information:
+  </Heading>
 
         <GridItem >
-        <FormLabel>First name</FormLabel>
+        <FormLabel>Full name</FormLabel>
         <Input placeholder="Mohammad" onChange={e =>{setFirstName(e.target.value)}}/>
         </GridItem>
 
         <GridItem >
-        <FormLabel>Last name</FormLabel>
-        <Input placeholder="Ali" onChange={e =>{ setlasttName(e.target.value)}} />
+        <FormLabel>Job Title</FormLabel>
+        <Input placeholder="HR or it member" onChange={e =>{ setjob(e.target.value)}} />
         </GridItem>
 
         <GridItem >
         <FormLabel>Email</FormLabel>
         <Input placeholder="email@email.com " onChange={e =>{setEmail(e.target.value)}} />
         </GridItem>
-        <Box   >
-        <FormLabel>Description</FormLabel>
-        <Textarea placeholder="Description About Your Work" onChange={e =>{setDescription(e.target.value)}} />
-        </Box>
+       
         </Box>
         {/** End info */}
 
@@ -190,7 +195,7 @@ localStorage.setItem('companyName',business)
         <Textarea placeholder="Description About Your Work" onChange={e =>{setDescription(e.target.value)}} />
         </Box>
       */}
-      <Button mt={5} w={100} mx='auto'bg={"lightgreen"} color={"white"} fontSize={25} onClick={post} >Create</Button>
+      <Button mt={5} colorScheme='teal'  w={'50%'} mx='auto'bg={'green.500'} color={"white"} fontSize={25} onClick={post} >Create</Button>
      {/* <Button bg={"lightgreen"} onClick={()=>{DeleteItems}}>delete</Button> */}
 
     </Grid>

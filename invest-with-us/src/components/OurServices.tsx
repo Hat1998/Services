@@ -9,17 +9,21 @@ export default function Home3(){
       bg="#fff"
       _dark={{ bg: "#3e3e3e" }}
       p={20}
-      w="full"
+      w="auto"
+      
       justifyContent="center"
       alignItems="center"
+
       
     >
         
       <Box
-        shadow="xl"
+        // border={'2px'}
+        rounded={'lg'}
+        shadow="lg"
         bg="white"
         _dark={{ bg: "gray.800" }}
-        px={8}
+        px={10}
         py={20}
         mx="auto"
         
@@ -28,7 +32,7 @@ export default function Home3(){
         <SimpleGrid
           alignItems="start"
           columns={{ base: 1, md: 2 }}
-          mb={24}
+          mb={5}
           spacingY={{ base: 10, md: 32 }}
           spacingX={{ base: 10, md: 24 }}
         >
@@ -72,7 +76,7 @@ export default function Home3(){
           alignItems="center"
           columns={{ base: 1, md: 2 }}
           flexDirection="column-reverse"
-          mb={5}
+          mt={-50}
           spacingY={{ base: 10, md: 32 }}
           spacingX={{ base: 10, md: 24 }}
         >

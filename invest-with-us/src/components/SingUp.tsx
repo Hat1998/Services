@@ -6,7 +6,7 @@ function SingUp() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <div>
-      <Button  bg={"green.400"} color={'#fff'}onClick={onOpen}>Sing Up</Button>
+      <Button colorScheme='teal' bg={"green.400"} color={'#fff'}onClick={onOpen}>Sing Up</Button>
 
       <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay />

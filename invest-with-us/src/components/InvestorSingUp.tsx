@@ -59,10 +59,10 @@ function InvestorSingUp() {
 
               <div className="d-flex flex-row align-items-center mb-1 ">
                 <MDBIcon fas icon="user me-3" size='lg'/>
-                <MDBInput label='Your Name' id='form1' type='text' className='w-100' onChange={e => {setName(e.target.value)}} />
+                 <MDBInput label='Your Name' id='form1' type='text' className='w-100' onChange={e => {setName(e.target.value)}} />
                 </div>
                {error&&name.length<=0?<p  className= 'ms-4 text-danger fs-6'>Name field cannot be empty</p>:''}
-
+               
               <div className="d-flex flex-row align-items-center mb-2">
                 <MDBIcon fas icon="envelope me-3" size='lg'/>
                 <MDBInput label='Your Email' id='form2' type='email' onChange={e => {setEmail(e.target.value)}} />

@@ -58,8 +58,8 @@ export default function CaptionCarousel() {
     <Box
     
 
-     mt={'7rem'}
-      height={'450px'}
+     mt={'1rem'}
+      height={'360'}
       width={'full'}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
@@ -94,7 +94,7 @@ textAlign={'center'}      ><Text
           <Box
           
             key={index}
-            height={'150px'}
+            height={'150'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
