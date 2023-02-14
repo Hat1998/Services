@@ -12,9 +12,34 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 
 function App() {
+  const[name, setName] = React.useState('');
+  const[email, setEmail] = React.useState('');
+  const[password, setPassword] = React.useState('');
+  const[retypePassword, setRetypePassword] = React.useState('');
+  const[company, setCompany] = React.useState('');
+  const[cheked, setChecked] = React.useState(true);
+
+
+  const[error, setError] = React.useState(false)
+  
+  const navigate = useNavigate()
+ 
+   function register(e:any){
+ 
+    if(name.length == 0 || email.length == 0 || password.length == 0 || retypePassword.length == 0 || !cheked ||company.length == 0 ){
+      setError(true);
+      setChecked(false)
+        
+      }
+      else{
+         
+        navigate('/LogIn')
+      }
+
+    }
   return (
     <MDBContainer fluid>
 
@@ -35,35 +60,52 @@ function App() {
                 
                 Sign Up As Company </p>
 
-              <div className="d-flex flex-row align-items-center mb-4 ">
+              <div className="d-flex flex-row align-items-center mb-1 ">
                 <MDBIcon fas icon="user me-3" size='lg'/>
-                <MDBInput label='Your Name' id='form1' type='text' className='w-100'/>
+                <MDBInput label='Your Name' id='form1' type='text' className='w-100' onChange={e => {setName(e.target.value)}}/>
               </div>
-              <div className="d-flex flex-row align-items-center mb-4 ">
+              {error&&name.length<=0?<p  className= 'ms-4 text-danger fs-6'>Name field cannot be empty</p>:''}
+
+              <div className="d-flex flex-row align-items-center mb-2 ">
                 <MDBIcon fas icon="building me-3" size='lg'/>
-                <MDBInput label='Your Company' id='form1' type='text' className='w-100'/>
+                <MDBInput label='Your Company' id='form1' type='text' className='w-100' onChange={e => {setCompany(e.target.value)}} />
               </div>
+              {error&&company.length<=0?<p  className= 'ms-4 text-danger fs-6'>Company field cannot be empty</p>:''}
 
-              <div className="d-flex flex-row align-items-center mb-4">
+
+              <div className="d-flex flex-row align-items-center mb-2">
                 <MDBIcon fas icon="envelope me-3" size='lg'/>
-                <MDBInput label='Your Email' id='form2' type='email'/>
+                <MDBInput label='Your Email' id='form2' type='email' onChange={e => {setEmail(e.target.value)}}/>
               </div>
+              {error&&email.length<=0?<p  className= 'ms-4 text-danger fs-6 '>Email field cannot be empty</p>:''}
+              {error&&!email.includes('@')?<p  className= 'ms-4 text-danger fs-6 mb-2 '>Email Should include @</p>:''}
 
-              <div className="d-flex flex-row align-items-center mb-4 ">
+
+              <div className="d-flex flex-row align-items-center mb-2 ">
                 <MDBIcon fas icon="lock me-3" size='lg'/>
-                <MDBInput label='Password' id='form3' type='password' />
+                <MDBInput label='Password' id='form3' type='password' onChange={e => {setPassword(e.target.value)}}  />
               </div>
+              {error&&password.length<=0?<p  className= 'ms-4 text-danger fs-6 mb-2  '>Password field cannot be empty</p>:''}
+              {error&&password.length>=1 && password.length<=5?<p  className= 'ms-4 text-danger fs-6 mb-2  '>Password is too short</p>:''}
 
-              <div className="d-flex flex-row align-items-center mb-4">
+
+              <div className="d-flex flex-row align-items-center mb-2">
                 <MDBIcon fas icon="key me-3" size='lg'/>
-                <MDBInput label='Repeat your password' id='form4' type='password'/>
+                <MDBInput label='Repeat your password' id='form4' type='password' onChange={e => {setRetypePassword(e.target.value)}}/>
               </div>
+              {error&&password.length<=0?<p  className= 'ms-4 text-danger fs-6 mb-2  '>Password field cannot be empty</p>:''}
+              {error&&password!== retypePassword?<p  className= 'ms-4 text-danger fs-6 mb-2  '>Passwords are not the same</p>:''}
+
 
               <div className='mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='I Agree All statements in Terms of service' />
+                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='I Agree All statements in Terms of service'
+                 onClick={e => {setChecked(true)}} />
+                {!cheked?<p  className= 'ms-4 text-danger fs-6 mb-2  '> You should Agree All statements </p>:cheked}
+
+
               </div>
 
-              <MDBBtn className='mb-4' size='lg' color='success'>Register</MDBBtn>
+              <button className='btn btn-success'     onClick={register}>Register</button>
 
             </MDBCol>
 
