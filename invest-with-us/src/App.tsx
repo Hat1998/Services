@@ -21,12 +21,15 @@ function App() {
        {/* <CompanySingUp/>  */}
 {/* <ShowCards/> */}
     {/* <AddCompany/>  */}
-       <Routes>
-        <Route path='/' element={ <HomePage/> }/>
-        <Route path='/add' element={ <AddCompany/>}/>
-        <Route path='/companies' element={ <CompanyHome/>}/>
-        <Route path='/show' element={<ShowCards/>}/>
+       
+        {/* <Route path='/details' element={<CardDetails/>}/>
+=======
         {/* <Route path='/show/:id' element={<ShowCards/>}/> */}
+        <Routes>
+        <Route path='/show/:id' element={<ShowCards/>}/> 
+        <Route path='/show' element={<ShowCards/>}/> 
+        <Route path='/add' element={ <AddCompany/>}/> 
+        <Route path='/companies' element={ <CompanyHome/>}/>
         <Route path='/details' element={<CardDetails/>}/>
         <Route path='/details/:id' element={<CardDetails/>}/>
         <Route path='/SingUp' element={<CompanySingUp/>}/>

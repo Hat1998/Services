@@ -12,6 +12,8 @@ function ShowCards() {
   const navigate = useNavigate();
      
   const [data , setData] =React.useState<any[]>([])
+  const [id , setId] =React.useState<number>()
+
   
    
 
@@ -51,11 +53,11 @@ function ShowCards() {
       
 //   }
 
-function goTo(e:any){
-
-  e.data
-  
-}
+// const  goToCarddetails = (cardId:any) => {
+//   localStorage.setItem("selectedCard", cardId);
+//   props.history.push('/card-details');
+// // you can manage here to pass the clicked card id to the card details page if needed
+// }
 
 
   return (
@@ -161,8 +163,24 @@ function goTo(e:any){
           <Button fontSize={'lg'} mt={5}>Details</Button>
           </Link>
           </chakra.span>
-           
-        </Box>
+{/*           
+<<<<<<< HEAD
+       
+
+          <chakra.span
+            fontSize="md"
+            color="gray.700"
+            _dark={{ color: "gray.200" }}
+          >
+         <chakra.h1 fontSize={'18px'} fontWeight='bold' >investment Price:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
+             
+          </chakra.span>
+           {/* <Button mt={'10px'} onClick={()=> {goToCarddetails(data.id)}}>Details</Button> */}
+           {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
+            
+            
+         </Box>
       </Box>
     </Flex>
 
