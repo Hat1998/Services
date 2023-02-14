@@ -87,7 +87,7 @@ export default function Home3(){
               _dark={{ color: "gray.400" }}
               lineHeight={{ md: "shorter" }}
             >
-Chase thrills
+For Investor
             </chakra.h2>
             <chakra.p
               mb={100}
