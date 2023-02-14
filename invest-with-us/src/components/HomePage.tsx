@@ -30,7 +30,7 @@ textAlign={'left'}>
  rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
 Join now  </Button>
     </Box>
-<Box boxSize='md' my={"2rem"}>
+<Box boxSize='md' my={"7rem"}>
   <Image 
   w={'full'}
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
