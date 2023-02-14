@@ -14,9 +14,9 @@ function HomePage() {
 <NavHome/>
 
 
-<Box shadow={'lg'} >
-<Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='700' >
-    <SimpleGrid columns={2} spacingX={1000} w={'auto'} 
+<Box shadow={'lg'} h={'550'} w={'100%'} >
+<Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='400' >
+    <SimpleGrid columns={2} spacingX={'1000px'} w={'auto'} 
   
 textAlign={'left'}>
   <Box boxSize='3xl' mx={"180"} my={"15rem"} >
@@ -34,7 +34,7 @@ Join now  </Button>
     </Box>
 <Box boxSize='md' my={"7rem"}>
   <Image 
-  w={'full'}
+  w={'auto'}
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
 </Box>  
 </SimpleGrid>
@@ -45,7 +45,7 @@ Join now  </Button>
 
 
  <Box
-textAlign={'center'} pt={10} ><Text
+textAlign={'center'} pt={50} ><Text
       
       fontSize='3xl'
       as='b'
