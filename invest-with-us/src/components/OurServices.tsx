@@ -9,9 +9,10 @@ export default function Home3(){
       bg="#fff"
       _dark={{ bg: "#3e3e3e" }}
       p={20}
-      w="full"
+      w="auto"
       justifyContent="center"
       alignItems="center"
+
       
     >
         
@@ -72,7 +73,7 @@ export default function Home3(){
           alignItems="center"
           columns={{ base: 1, md: 2 }}
           flexDirection="column-reverse"
-          mb={5}
+          mt={-50}
           spacingY={{ base: 10, md: 32 }}
           spacingX={{ base: 10, md: 24 }}
         >

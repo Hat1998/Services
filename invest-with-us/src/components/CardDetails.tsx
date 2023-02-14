@@ -35,6 +35,7 @@ function CardDetails(props:any) {
          console.log(res)
       });
   }, []);
+
   return (
     <Container maxW={'7xl'}>
       <SimpleGrid
@@ -43,8 +44,8 @@ function CardDetails(props:any) {
         py={{ base: 18, md: 5 }}>
         <Flex>
           <Image
-            rounded={'md'}
-            alt={'product image'}
+            rounded={'lg'}
+            alt={' image'}
             src={data.photo}
             fit={'cover'}
             align={'center'}

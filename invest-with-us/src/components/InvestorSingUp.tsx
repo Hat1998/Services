@@ -32,7 +32,7 @@ function InvestorSingUp() {
 
               <div className="d-flex flex-row align-items-center mb-4 ">
                 <MDBIcon fas icon="user me-3" size='lg'/>
-                <MDBInput label='Your Name' id='form1' type='text' className='w-100'/>
+                <MDBInput label='Your Name' id='form1' type='text' className='w-100' />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">

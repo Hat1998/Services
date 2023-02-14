@@ -13,12 +13,12 @@ function HomePage() {
 <NavHome/>
 
 
-
+<Box shadow={'lg'} >
 <Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='700' >
-    <SimpleGrid columns={2} spacingX={1000} 
+    <SimpleGrid columns={2} spacingX={1000} w={'auto'} 
   
 textAlign={'left'}>
-  <Box boxSize='3xl' mx={"180"} my={"15rem"}>
+  <Box boxSize='3xl' mx={"180"} my={"15rem"} >
     <Text
      fontSize='3xl'
     color={'black'}
@@ -36,14 +36,14 @@ Join now  </Button>
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
 </Box>  
 </SimpleGrid>
-   
+</Box>
  </Box>
   
 
 
 
  <Box
-textAlign={'center'} ><Text
+textAlign={'center'} pt={10} ><Text
       
       fontSize='3xl'
       as='b'

@@ -5,12 +5,9 @@ import axios from "axios"
 import Show from './Show'
 import ShowCards from './ShowCards'
 
- 
-
-function CompanyHome( ) {
+function CompanyHome() {
     const[data, setData]= React.useState<any>([])
      
-    
     const navigate = useNavigate();
 
     function getAndNavigate(){
