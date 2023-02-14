@@ -5,6 +5,8 @@ import { BsFillBriefcaseFill } from "react-icons/bs";
 import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import NavCompany from "./NavCompany";
+import FooterHome from "./FooterHome";
 
 function AddCompany() {
     const[data, setData]= React.useState<any>([])
@@ -105,7 +107,9 @@ localStorage.setItem('companyName',business)
   return (
 
     
- 
+ <Box>
+<NavCompany/>
+
     <Box w='full' h='full' my={'auto'} p={5} >
      
   
@@ -201,6 +205,8 @@ Company Information:
     </Grid>
   
     </Box>
+    <FooterHome/>
+     </Box>
   );
 }
 

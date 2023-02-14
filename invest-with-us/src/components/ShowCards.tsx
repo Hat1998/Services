@@ -5,6 +5,8 @@ import { SimpleGrid,Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid,
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { MDBIcon } from "mdb-react-ui-kit";
+import NavCompany from "./NavCompany";
+import FooterHome from "./FooterHome";
 
 
 function ShowCards() {
@@ -61,7 +63,10 @@ function ShowCards() {
 
 
   return (
+    
         <div className="Show_cards">
+                  <NavCompany/>
+
 {showElement?<div className="spinner"> 
 <Spinner
    boxSize='5rem'
@@ -201,6 +206,7 @@ function ShowCards() {
 
     </Box>
 
+<FooterHome/>
 
         </div>
       )}

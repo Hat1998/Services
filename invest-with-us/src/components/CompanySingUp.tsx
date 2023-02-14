@@ -104,9 +104,9 @@ function App() {
 
 
               </div>
-
+<Link to={"./companies"}>
               <button className='btn btn-success'     onClick={register}>Register</button>
-
+              </Link>
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>

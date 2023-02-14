@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Alert,Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button, SimpleGrid, ButtonGroup, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverFooter, PopoverHeader, PopoverTrigger} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { MDBIcon } from "mdb-react-ui-kit";
+import NavCompany from "./NavCompany";
 function Show() {
     const [data , setData] =React.useState<any[]>([])
     const [id , setId] =React.useState<any>()

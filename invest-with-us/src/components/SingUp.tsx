@@ -1,4 +1,4 @@
-import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
+import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter,Text, Center } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom';
 
@@ -19,6 +19,7 @@ function SingUp() {
         className='img-fluid rounded'
         alt='example'
       />
+      
           </ModalBody>
 
           <ModalFooter mx={'auto'} >
@@ -27,8 +28,13 @@ function SingUp() {
             </Button>
             
             </Link>
-            <Link to='/InvestorSingUp'>  <Button bg={"gray.300"}>Investor</Button>
+           
+
+
+
+            <Link to='/InvestorSingUp'>  <Button textColor={"white"} bg={"#2F2E41"}>Investor</Button>
             </Link>
+            
           </ModalFooter>
         </ModalContent>
       </Modal>

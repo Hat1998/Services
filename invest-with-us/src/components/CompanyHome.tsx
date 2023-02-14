@@ -4,6 +4,8 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Show from "./Show";
 import ShowCards from "./ShowCards";
+import NavCompany from "./NavCompany";
+import FooterHome from "./FooterHome";
 
 function CompanyHome() {
     const[data, setData]= React.useState<any>([])
@@ -25,6 +27,7 @@ function CompanyHome() {
 
   return (
     <>
+    <NavCompany/>
       <Box mx={""} width="100px" display="block" justifyContent={"start"}>
         <Button
           flex={1}
@@ -38,6 +41,8 @@ function CompanyHome() {
 
       {/* this how */}
       <Show />
+      <FooterHome />
+
     </>
   );
 }
