@@ -5,6 +5,7 @@ import React from 'react'
 import NavHome from './NavHome'
 import ClientsHome from './ClientsHome'
 import FooterHome from './FooterHome'
+import OurServices from './OurServices'
 
 function HomePage() {
   return (
@@ -13,11 +14,11 @@ function HomePage() {
 
 
 
-    
-    <SimpleGrid columns={2} spacing={500} m='170px'mt={20}
-    mb={0}
+<Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='700' >
+    <SimpleGrid columns={2} spacingX={1000} 
+  
 textAlign={'left'}>
-  <Box boxSize='3xl' mt={120}>
+  <Box boxSize='3xl' mx={"180"} my={"15rem"}>
     <Text
      fontSize='3xl'
     color={'black'}
@@ -29,17 +30,31 @@ textAlign={'left'}>
  rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
 Join now  </Button>
     </Box>
-<Box boxSize='md'>
+<Box boxSize='md' my={"5rem"}>
   <Image 
   w={'full'}
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
 </Box>  
 </SimpleGrid>
    
- 
+ </Box>
+  
+
+
+
+ <Box
+textAlign={'center'} ><Text
+      
+      fontSize='3xl'
+      as='b'
+      >Our Services & Solutions
+
+      </Text>
+  <OurServices/></Box>
 
     <Box>
     <ClientsHome/>
+    </Box>
     <section style={{color: "#000"}}>
   <div className="container py-5">
     <div className="row d-flex justify-content-center">
@@ -159,7 +174,7 @@ Join now  </Button>
 </section>
 
 
-    </Box>
+   
     <FooterHome/>
     </div>
   )

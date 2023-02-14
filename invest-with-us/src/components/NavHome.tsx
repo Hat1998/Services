@@ -27,6 +27,7 @@ import {
     BellIcon,
     SearchIcon,
   } from '@chakra-ui/icons';
+import SingUp from "./SingUp";
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
@@ -83,26 +84,19 @@ import {
             spacing={6}>
             <Button
               as={'a'}
-              fontSize={'sm'}
+              fontSize={'md'}
               fontWeight={400}
               variant={''}
               href={''}>
               Sign In
             </Button>
+              <SingUp/>
 
-            <Link as={ReachLink} to='/SingUp'>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'green.400'}
-              _hover={{
-                bg: '#319795',
-              }}>
-              Sign Up
-            </Button>
-</Link>
+           
+ 
+              
+      
+
             
           </Stack>
         </Flex>
