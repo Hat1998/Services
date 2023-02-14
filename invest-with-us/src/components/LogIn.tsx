@@ -33,20 +33,13 @@ function App() {
               <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
 
                 
-                Sign Up As Company </p>
+                Log In </p>
 
-              <div className="d-flex flex-row align-items-center mb-4 ">
-                <MDBIcon fas icon="user me-3" size='lg'/>
-                <MDBInput label='Your Name' id='form1' type='text' className='w-100'/>
-              </div>
-              <div className="d-flex flex-row align-items-center mb-4 ">
-                <MDBIcon fas icon="building me-3" size='lg'/>
-                <MDBInput label='Your Company' id='form1' type='text' className='w-100'/>
-              </div>
+            
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="envelope me-3" size='lg'/>
-                <MDBInput label='Your Email' id='form2' type='email'/>
+                <MDBInput label='Email' id='form2' type='email'/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4 ">
@@ -54,21 +47,20 @@ function App() {
                 <MDBInput label='Password' id='form3' type='password' />
               </div>
 
-              <div className="d-flex flex-row align-items-center mb-4">
-                <MDBIcon fas icon="key me-3" size='lg'/>
-                <MDBInput label='Repeat your password' id='form4' type='password'/>
-              </div>
+          
 
-              <div className='mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='I Agree All statements in Terms of service' />
-              </div>
+              
 
-              <MDBBtn className='mb-4' size='lg' color='success'>Register</MDBBtn>
+              <MDBBtn className='mb-4' size='lg' color='success'>LOGIN</MDBBtn>
+              <a className="small text-muted" href="#!">Forgot password?</a>
+                  <p className="mb-5 pb-lg-2" style={{color: 'green'}}>Don't have an account? <a href="#!"
+                      style={{color: 'black'}}>Register here</a></p>
+                  <a href="#!" className="small text-muted">Terms of use privacy policy</a>
 
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
-              <MDBCardImage src='https://j.top4top.io/p_2600burl71.png' fluid/>
+              <MDBCardImage src='https://f.top4top.io/p_2601dcvhp1.png' fluid/>
             </MDBCol>
 
           </MDBRow>

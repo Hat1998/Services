@@ -25,6 +25,7 @@ function SingUp() {
           <Link to='/SingUp'>  <Button bg={"green.400"} color='#fff' mr={"4rem"}>
           Company
             </Button>
+            
             </Link>
             <Link to='/InvestorSingUp'>  <Button bg={"gray.300"}>Investor</Button>
             </Link>

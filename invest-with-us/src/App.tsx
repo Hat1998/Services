@@ -10,6 +10,8 @@ import CardDetails from './components/CardDetails';
 import CompanySingUp from './components/CompanySingUp';
 import Update from './components/Update';
 import InvestorSingUp from './components/InvestorSingUp';
+import SingUp from './components/SingUp';
+import LogIn from './components/LogIn';
 
 function App() {
  
@@ -32,6 +34,9 @@ function App() {
         <Route path='/details/:id' element={<CardDetails/>}/>
         <Route path='/SingUp' element={<CompanySingUp/>}/>
         <Route path='/Update' element={<Update/>}/>
+        <Route path='/SinguUp' element={<SingUp/>}/>
+        <Route path='/LogIn' element={<LogIn/>}/>
+
         <Route path='/InvestorSingUp' element={<InvestorSingUp/>}/>
 
 

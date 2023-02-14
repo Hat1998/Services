@@ -90,7 +90,7 @@ export default function Home3(){
 For Investor
             </chakra.h2>
             <chakra.p
-              mb={100}
+              mb={200}
               textAlign={{ base: "center", sm: "left" }}
               color="gray.600"
               _dark={{ color: "gray.400" }}
