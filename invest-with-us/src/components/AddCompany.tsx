@@ -45,14 +45,16 @@ function AddCompany() {
           axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
               setData(data.filter((show: { id: any; })=>{
               console.log(res);
-              return show.id!=id
+              return show.id==id
       })
         )  })
           
       }
       
     function post(){
-   
+// localStorage.setItem('')
+// localStorage.setItem('')
+// localStorage.setItem('')
         axios.post('https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB',{
             firstName,
             lasttName,
@@ -67,10 +69,17 @@ function AddCompany() {
             investmentPrice,
             conference  
          }) 
+localStorage.setItem('id',id)
+localStorage.setItem('companyName',companyName)
+localStorage.setItem('photo',photo)
+localStorage.setItem('conference',conference)
+localStorage.setItem('annualIncome',annualIncome)
+localStorage.setItem('investmentPrice',investmentPrice)
+localStorage.setItem('companyName',business)
+
          
          axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
         
-         show(localStorage.getItem("id"));
         navigate('/companies', {})
 
 
@@ -97,51 +106,29 @@ function AddCompany() {
 
     
  
-    <Box w='full' >
+    <Box w='full' h='full' my={'auto'}>
      
   
-      <Grid  w={'40rem'} pt={5}  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 1fr)' >
-      <FormControl isRequired display={'grid'}   gridTemplateColumns='40% 40% '  justifyContent={'space-evenly'} gap='10px'>
-        {/** start Hr info */}
-
-        <Box>
-
-
-        <GridItem >
-        <FormLabel>First name</FormLabel>
-        <Input placeholder="First name" onChange={e =>{setFirstName(e.target.value)}}/>
-        </GridItem>
-
-        <GridItem >
-        <FormLabel>Last name</FormLabel>
-        <Input placeholder="Last name" onChange={e =>{ setlasttName(e.target.value)}} />
-        </GridItem>
-
-        <GridItem >
-        <FormLabel>Email</FormLabel>
-        <Input placeholder="Email " onChange={e =>{setEmail(e.target.value)}} />
-        </GridItem>
-        </Box>
-        {/** End info */}
-
-        
+      <Grid  w={'35rem'} p={50}  border= '1px'  borderColor={"blackAlpha.200"} borderRadius={'xl'} m={'auto'} shadow={'lg'} rounded={'lg'}  h='full' templateColumns='repeat(1, 2fr)' >
+      <FormControl isRequired display={'grid'}   gridTemplateColumns='45% 45% '  justifyContent={'space-around'} >
+              
 {/** start company info */}
-        <Box>
+<Box >
         
         <GridItem >
-        <FormLabel>Company name</FormLabel>
-        <Input placeholder="Company name" onChange={e =>{setCompanyName(e.target.value)}}/>
+        <FormLabel>Company Name</FormLabel>
+        <Input placeholder="Tuwaiq Academy" onChange={e =>{setCompanyName(e.target.value)}}/>
         </GridItem>
 
         
 
          <GridItem >
-        <FormLabel>Photo</FormLabel>
-        <Input placeholder="Photo " onChange={e =>{setPhoto(e.target.value)}}/>
+        <FormLabel>Photo URL</FormLabel>
+        <Input placeholder="www.Photo.png" onChange={e =>{setPhoto(e.target.value)}}/>
         </GridItem> 
         <GridItem >
         <FormLabel>Annual Income</FormLabel>
-        <Input placeholder="Annual Income " onChange={e =>{setAnnualIncome(e.target.value)}}/>
+        <Input placeholder="1B SAR " onChange={e =>{setAnnualIncome(e.target.value)}}/>
         </GridItem>
         <GridItem >
         <FormLabel>Share Price</FormLabel>
@@ -149,11 +136,11 @@ function AddCompany() {
         </GridItem>
         <GridItem >
         <FormLabel>Location</FormLabel>
-        <Input placeholder="location " onChange={e =>{setLocation(e.target.value)}}/>
+        <Input placeholder=" Riyadh" onChange={e =>{setLocation(e.target.value)}}/>
         </GridItem>
         <GridItem >
-        <FormLabel>Business Area</FormLabel>
-        <Input placeholder="Business Area" onChange={e =>{setBusiness(e.target.value)}}/>
+        <FormLabel>Business Field </FormLabel>
+        <Input placeholder="Oil and Gas or IT " onChange={e =>{setBusiness(e.target.value)}}/>
         </GridItem>
         <GridItem >
         <FormLabel>Investment Price</FormLabel>
@@ -161,22 +148,49 @@ function AddCompany() {
         </GridItem>
         <GridItem >
         <FormLabel>Conference</FormLabel>
-        <Input placeholder="Conference" onChange={e =>{setConference(e.target.value)}}/>
+        <Input placeholder="LAEP or Apple" onChange={e =>{setConference(e.target.value)}}/>
         </GridItem>
         
         </Box>
 
         {/** End company info */}
+        {/** start Hr info */}
+
+        <Box>
+
+
+        <GridItem >
+        <FormLabel>First name</FormLabel>
+        <Input placeholder="Mohammad" onChange={e =>{setFirstName(e.target.value)}}/>
+        </GridItem>
+
+        <GridItem >
+        <FormLabel>Last name</FormLabel>
+        <Input placeholder="Ali" onChange={e =>{ setlasttName(e.target.value)}} />
+        </GridItem>
+
+        <GridItem >
+        <FormLabel>Email</FormLabel>
+        <Input placeholder="email@email.com " onChange={e =>{setEmail(e.target.value)}} />
+        </GridItem>
+        <Box   >
+        <FormLabel>Description</FormLabel>
+        <Textarea placeholder="Description About Your Work" onChange={e =>{setDescription(e.target.value)}} />
+        </Box>
+        </Box>
+        {/** End info */}
+
+  
 
         {/* <input type="file"onChange={e => setFile(URL.createObjectURL(e.target.files[0]))} />
             <img src={file} /> */}
       </FormControl>
-      <Box  margin={'30px'}>
+      {/* <Box   >
         <FormLabel>Description</FormLabel>
-        <Textarea placeholder="Description..." onChange={e =>{setDescription(e.target.value)}} />
+        <Textarea placeholder="Description About Your Work" onChange={e =>{setDescription(e.target.value)}} />
         </Box>
-     
-      <Button bg={"lightgreen"} color={"white"} fontSize={25} onClick={post} >Create</Button>
+      */}
+      <Button mt={5} w={100} mx='auto'bg={"lightgreen"} color={"white"} fontSize={25} onClick={post} >Create</Button>
      {/* <Button bg={"lightgreen"} onClick={()=>{DeleteItems}}>delete</Button> */}
 
     </Grid>

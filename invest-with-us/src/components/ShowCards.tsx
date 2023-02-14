@@ -1,9 +1,10 @@
 import React from "react";
 import axios from 'axios';
 import { Link , useNavigate} from "react-router-dom";
-import { SimpleGrid,Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button} from "@chakra-ui/react";
+import { SimpleGrid,Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button, HStack} from "@chakra-ui/react";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 
 function ShowCards() {
@@ -78,7 +79,7 @@ function ShowCards() {
  {/*Grid  cards  Container --------------------------------------------------*/}
  <Box >
      {/*Start of Grid body */}
-    <SimpleGrid  border= '1px' borderColor={"blackAlpha.200"} borderRadius={'2xl'} mt='auto'  gap={15}  columns={{ base: 1, md: 2, lg: 3 }}> 
+    <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto' gap={15} columns={{ base: 1, md: 2, lg: 3 }}> 
     
     {/*Mapping ----------  */}
 
@@ -86,38 +87,42 @@ function ShowCards() {
 
       return(
 
-      
     <GridItem key={item.id}> 
     <Flex
-      bg="#edf3f8"
+      // bg="#edf3f8"
+      rounded="lg"
+      display= 'Flex'
       _dark={{ bg: "#3e3e3e" }}
       p={5}
       w="md"
       h={"lx"}
       alignItems="center"
       justifyContent="center"
+    
     >
+   
       <Box
         w="xs"
         bg="white"
         _dark={{ bg: "gray.800" }}
-        shadow="lg"
+        shadow="xl"
         rounded="lg"
         overflow="hidden"
         mx="auto"
-        h={"lg"}
+        h={"lx"}
+        
       
       >
         <Image
           w="full"
           h={56}
           fit="cover"
-          src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+          src={item.photo}
           alt="avatar"
-          rounded="lg"
+          rounded="sm"
          />
 
-         <Flex alignItems="center" px={6} py={3} bg="gray.600" >
+         <Flex alignItems="center" px={6} py={3} bg="gray.300" >
 
           <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
           {item.companyName}
@@ -132,19 +137,34 @@ function ShowCards() {
             color="gray.800"
             _dark={{ color: "white" }}
             fontWeight="bold"
+            
           >
    
           </chakra.h1>
     
           <chakra.span
             fontSize="sm"
-            color="gray.700"
+            color="gray.800"
             _dark={{ color: "gray.200" }}
+        
           >
-              <chakra.h1 fontSize={'18px'} fontWeight='bold' >conference:</chakra.h1>
-              <chakra.h1 fontSize={'18px'}   >{item.conference}</chakra.h1>
+              <chakra.h1 fontSize={'18px'} fontWeight='bold'>Conference:</chakra.h1>
+              <chakra.h1 fontSize={'16px'}  mt={1} >{item.conference}</chakra.h1>
+         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Annual Income:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}  mt={1} >{item.annualIncome} <MDBIcon fas icon="dollar-sign" size='lg' /></chakra.h1>
+         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >investment Price:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}  mt={1} ><MDBIcon fas icon="hand-holding-usd" size='lg' /> {item.investmentPrice}</chakra.h1>
+         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Location:</chakra.h1>
+              <chakra.h1 fontSize={'18px'} mt={1}  ><MDBIcon far icon="compass" /> {item.location}</chakra.h1>
+              <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={2} > Business Field: </chakra.h1>
+              <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {item.business}</chakra.h1>
              
+          <Link to={`/details/${item.id}`}>
+          <Button fontSize={'lg'} mt={5}>Details</Button>
+          </Link>
           </chakra.span>
+{/*           
+<<<<<<< HEAD
        
 
           <chakra.span
@@ -157,13 +177,14 @@ function ShowCards() {
              
           </chakra.span>
            {/* <Button mt={'10px'} onClick={()=> {goToCarddetails(data.id)}}>Details</Button> */}
-           <Button onClick={()=>{navigate('/details')}}>Details</Button>
+           {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
             
-        </Box>
+            
+         </Box>
       </Box>
     </Flex>
 
-    
+
     </GridItem>
       )
     })}
