@@ -11,7 +11,7 @@ function SingUp() {
       <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay />
         <ModalContent w={'full'} h={'md'}  >
-          <ModalHeader mx={'auto'} my={'25'}>Do you want to register as ?</ModalHeader>
+          <ModalHeader mx={'auto'} my={'25'}>Do you want to Sign Up as ?</ModalHeader>
           <ModalCloseButton />
           <ModalBody >
            
