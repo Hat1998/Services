@@ -30,7 +30,7 @@ textAlign={'left'}>
  rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
 Join now  </Button>
     </Box>
-<Box boxSize='md' my={"5rem"}>
+<Box boxSize='md' my={"2rem"}>
   <Image 
   w={'full'}
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
@@ -56,8 +56,8 @@ textAlign={'center'} ><Text
     <ClientsHome/>
     </Box>
     <section style={{color: "#000"}}>
-  <div className="container py-5">
-    <div className="row d-flex justify-content-center">
+  <div className="container mb-5 pb-5">
+    <div className="row d-flex justify-content-center ">
       <div className="col-md-10 col-xl-8 text-center">
         <h1 className="fw-bold mb-4 fs-2">User reviews</h1>
         <p className="mb-4 pb-2 mb-md-5 pb-md-0 fs-4">

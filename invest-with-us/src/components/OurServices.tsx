@@ -56,8 +56,7 @@ export default function Home3(){
             >
         Companies that invest in conferences can add and display investment details easily so that investors can reach them.
 <hr></hr>
-<br></br>
-<br></br>
+
      
             </chakra.p>
             
@@ -73,7 +72,7 @@ export default function Home3(){
           alignItems="center"
           columns={{ base: 1, md: 2 }}
           flexDirection="column-reverse"
-          mb={24}
+          mb={5}
           spacingY={{ base: 10, md: 32 }}
           spacingX={{ base: 10, md: 24 }}
         >
@@ -91,7 +90,7 @@ export default function Home3(){
 Chase thrills
             </chakra.h2>
             <chakra.p
-              mb={400}
+              mb={100}
               textAlign={{ base: "center", sm: "left" }}
               color="gray.600"
               _dark={{ color: "gray.400" }}
@@ -99,11 +98,10 @@ Chase thrills
             >
               
               Experience the thrills of Yas Island and find serenity on the shores of Saadiyat Island, all in the same 24 hours. Whatever your mood,  has it all whenever you're ready.
-              <br></br>
+ 
 
               <hr></hr>
-<br></br>
-<br></br>
+
             </chakra.p>
            
           </Box>
