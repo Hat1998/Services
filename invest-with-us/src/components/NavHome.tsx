@@ -11,6 +11,7 @@ import {
     Stack,
     Collapse,
     Icon,
+    Image,
     Link,
     Popover,
     PopoverTrigger,
@@ -63,18 +64,13 @@ import SingUp from "./SingUp";
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
-             as='b'
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              fontSize={'25px'}
-              ml={5}
-              color={useColorModeValue('gray.800', 'white')}
-              
-              >
-                
-                Conferences  <br></br> Investment 
-            </Text>
+
+  <Image objectFit={'contain'}
+  ml={5}
+  h={"90px"}
+  w={"auto"}
+  src='https://h.top4top.io/p_2601r33i01.png' alt='Dan Abramov' />
+
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -122,7 +118,7 @@ import SingUp from "./SingUp";
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Stack direction={'row'} spacing={5} mt='6'>
+      <Stack direction={'row'} spacing={5} mt={10}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -130,7 +126,7 @@ import SingUp from "./SingUp";
                 <Link
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'sm'}
+                  fontSize={'md'}
                   fontWeight={500}
                   color={linkColor}
                   _hover={{
