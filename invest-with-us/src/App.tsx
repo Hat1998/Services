@@ -9,24 +9,17 @@ import { Routes, Route } from 'react-router-dom';
 import CardDetails from './components/CardDetails';
 import CompanySingUp from './components/CompanySingUp';
 import Update from './components/Update';
+import InvestorSingUp from './components/InvestorSingUp';
 
 function App() {
  
   return (
     <div className="App">
+
        {/* <CompanySingUp/>  */}
 {/* <ShowCards/> */}
     {/* <AddCompany/>  */}
-       {/* 
-        <Route path='/add' element={ <AddCompany/>}/>
-        <Route path='/companies' element={ <CompanyHome/>}/>
-        <Route path='/show' element={<ShowCards/>}/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Route path='/card-details' element={<CardDetails/>}/>
-=======
-       </Routes>  
-      
+       
         {/* <Route path='/details' element={<CardDetails/>}/>
 =======
         {/* <Route path='/show/:id' element={<ShowCards/>}/> */}
@@ -39,7 +32,8 @@ function App() {
         <Route path='/details/:id' element={<CardDetails/>}/>
         <Route path='/SingUp' element={<CompanySingUp/>}/>
         <Route path='/Update' element={<Update/>}/>
- 
+        <Route path='/InvestorSingUp' element={<InvestorSingUp/>}/>
+
 
       </Routes>  
       
