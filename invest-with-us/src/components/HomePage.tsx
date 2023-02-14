@@ -6,6 +6,7 @@ import NavHome from './NavHome'
 import ClientsHome from './ClientsHome'
 import FooterHome from './FooterHome'
 import OurServices from './OurServices'
+import { Link } from 'react-router-dom'
 
 function HomePage() {
   return (
@@ -24,11 +25,12 @@ textAlign={'left'}>
     color={'black'}
     
     >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
-    
+     <Link to ={"/"}>
     <Button 
     mt={35}
  rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
 Join now  </Button>
+</Link>
     </Box>
 <Box boxSize='md' my={"7rem"}>
   <Image 
