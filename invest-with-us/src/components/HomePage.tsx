@@ -26,7 +26,7 @@ textAlign={'left'}>
     >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
     
     <Button 
-    mt={45}
+    mt={35}
  rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
 Join now  </Button>
     </Box>
@@ -78,19 +78,19 @@ textAlign={'center'} ><Text
             <h6 className="font-weight-bold my-3">Founder at ET Company</h6>
             <ul className="list-unstyled d-flex justify-content-center">
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star-half-alt fa-sm text-info"></i>
+                <i className="fas fa-star-half-alt fa-sm text-success"></i>
               </li>
             </ul>
             <p className="mb-2">
@@ -112,19 +112,19 @@ textAlign={'center'} ><Text
             <h6 className="font-weight-bold my-3">Photographer at Studio LA</h6>
             <ul className="list-unstyled d-flex justify-content-center">
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
             </ul>
             <p className="mb-2">
@@ -144,21 +144,21 @@ textAlign={'center'} ><Text
             </div>
             <h5 className="font-weight-bold">Hani Mahmoud</h5>
             <h6 className="font-weight-bold my-3">Front-end Developer in NY</h6>
-            <ul className="list-unstyled d-flex justify-content-center">
+            <ul className="list-unstyled d-flex justify-content-center" >
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="fas fa-star fa-sm text-info"></i>
+                <i className="fas fa-star fa-sm text-success"></i>
               </li>
               <li>
-                <i className="far fa-star fa-sm text-info"></i>
+                <i className="far fa-star fa-sm text-success"></i>
               </li>
             </ul>
             <p className="mb-2">

@@ -12,6 +12,7 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 function InvestorSingUp() {
   return (
@@ -20,6 +21,11 @@ function InvestorSingUp() {
       <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
         <MDBCardBody>
           <MDBRow>
+          <Link to ={"/"}>
+            <div style={{color:"green"}}>
+            <i className="fa-solid fa-circle-arrow-left fa-3x "></i>
+             </div>
+             </Link> 
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
               <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign Up As Investor</p>
