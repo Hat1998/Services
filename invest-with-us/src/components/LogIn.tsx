@@ -57,7 +57,6 @@ function App() {
                           <Button 
                 mt={35}
               
-                rightIcon={<ArrowForwardIcon />}
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}

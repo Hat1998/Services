@@ -7,6 +7,7 @@ import ClientsHome from './ClientsHome'
 import FooterHome from './FooterHome'
 import OurServices from './OurServices'
 import { Link } from 'react-router-dom'
+import Get from './Get'
 
 function HomePage() {
   return (
@@ -26,20 +27,11 @@ textAlign={'left'}>
     
     >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
    
-<Button 
-    mt={35}
-   
-    rightIcon={<ArrowForwardIcon />}
-    rounded={'full'}
-    size={'lg'}
-    fontWeight={'normal'}
-    px={6}
-    colorScheme={'red'}
-    bg={'#48BB78'}
-    _hover={{ bg: 'green.500' }}>
-      <Text  as='b'>Get Started</Text>
+
     
-    </Button>
+    <Get/>
+    
+    
     </Box>
 <Box boxSize='md' my={"7rem"}>
   <Image 

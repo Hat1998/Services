@@ -90,7 +90,7 @@ import SingUp from "./SingUp";
               fontWeight={800}
               variant={''}
               href={''}>
-              Sign In
+              Log In
             </Button>
 </Link>
            

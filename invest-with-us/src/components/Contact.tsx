@@ -27,10 +27,11 @@ import {
 
   import { BsGithub, BsLinkedin, BsPerson } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import Send from './Send';
   
   export default function contact() {
     return (
-
+<Box>
       <Container bg="#fff" maxW="full" mt={100}  centerContent overflow="hidden">
         <Flex>
             
@@ -156,13 +157,22 @@ import { Link } from 'react-router-dom';
                           />
                         </FormControl>
                         <FormControl id="name" float="right">
-                          <Button
-                            variant="solid"
-                            bg="#48BB78"
-                            color="white"
-                            _hover={{}}>
-                            Send Message
-                          </Button>
+
+
+                        <Button
+                rounded={'full'}
+                size={'md'}
+                fontWeight={'normal'}
+                px={6}
+                colorScheme={'red'}
+                bg={'#48BB78'}
+                _hover={{ bg: 'green.500' }}>
+                  <Text as='b'>
+                    <Send/>
+                  
+                </Text>
+              </Button>
+                         
                         </FormControl>
                       </VStack>
                     </Box>
@@ -173,5 +183,6 @@ import { Link } from 'react-router-dom';
           </Box>
         </Flex>
       </Container>
+      </Box>
     );
   }

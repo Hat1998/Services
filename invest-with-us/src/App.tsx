@@ -14,6 +14,7 @@ import SingUp from './components/SingUp';
 import LogIn from './components/LogIn';
 import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
+import Send from './components/Send';
 
 function App() {
  
@@ -42,6 +43,8 @@ function App() {
         <Route path='/LogIn' element={<LogIn/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/AboutUs' element={<AboutUs/>}/>
+        <Route path='/Send' element={<Send/>}/>
+
 
 
 
