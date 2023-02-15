@@ -1,4 +1,7 @@
 import React from "react";
+import { IoMdBusiness } from 'react-icons/Io';
+import { GiTakeMyMoney } from 'react-icons/Gi';
+
 
 import { Box, Button, chakra, Flex, SimpleGrid,Image } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -49,7 +52,7 @@ export default function Home3(){
               lineHeight={{ md: "shorter" }}
               
             >
-                 For Companies
+               <IoMdBusiness/>  For Companies
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -91,7 +94,7 @@ export default function Home3(){
               _dark={{ color: "gray.400" }}
               lineHeight={{ md: "shorter" }}
             >
-For Investor
+<GiTakeMyMoney/>For Investor
             </chakra.h2>
             <chakra.p
               mb={200}

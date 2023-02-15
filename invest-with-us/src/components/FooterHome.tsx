@@ -1,3 +1,5 @@
+import logo from "./878.svg";
+
 import { ReactNode } from 'react';
 import {
   Box,
@@ -10,6 +12,7 @@ import {
   chakra,
   useColorModeValue,
   Input,
+  Image,
   IconButton,
 } from '@chakra-ui/react';
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
@@ -88,6 +91,8 @@ export default function LargeWithAppLinksAndSocial() {
             <Link href={'#'}>Terms of Service</Link>
             <Link href={'#'}>Law Enforcement</Link>
           </Stack>
+      
+
           <Stack align={'flex-start'}>
             <ListHeader>Stay up to date</ListHeader>
             <Stack direction={'row'}>
@@ -109,6 +114,9 @@ export default function LargeWithAppLinksAndSocial() {
                 icon={<BiMailSend />}
               />
                         </Stack>
+
+   
+
 
             </Stack>
 

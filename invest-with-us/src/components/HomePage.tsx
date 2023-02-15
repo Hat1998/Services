@@ -25,12 +25,21 @@ textAlign={'left'}>
     color={'black'}
     
     >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
-     <Link to ={"/"}>
-    <Button 
+   
+<Button 
     mt={35}
- rightIcon={<ArrowForwardIcon />} colorScheme='teal' bg={'green.400'} color={'white'} >
-Join now  </Button>
-</Link>
+   
+    rightIcon={<ArrowForwardIcon />}
+    rounded={'full'}
+    size={'lg'}
+    fontWeight={'normal'}
+    px={6}
+    colorScheme={'red'}
+    bg={'#48BB78'}
+    _hover={{ bg: 'green.500' }}>
+      <Text  as='b'>Get Started</Text>
+    
+    </Button>
     </Box>
 <Box boxSize='md' my={"7rem"}>
   <Image 
