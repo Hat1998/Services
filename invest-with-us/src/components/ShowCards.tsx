@@ -33,7 +33,7 @@ function ShowCards() {
   React.useEffect(()=>{
     setTimeout(function() {
       setShowElement(false)
-         }, 2000);
+         }, 1000);
        },
    [])
    //
@@ -103,6 +103,8 @@ function ShowCards() {
       h={"lx"}
       alignItems="center"
       justifyContent="center"
+
+  bg={'balck'}
       
     
     >
