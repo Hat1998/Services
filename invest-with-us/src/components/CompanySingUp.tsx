@@ -14,7 +14,7 @@ import {
 from 'mdb-react-ui-kit';
 import { Link , useNavigate} from 'react-router-dom';
 
-function App() {
+function CompanySingUp() {
   const[name, setName] = React.useState('');
   const[email, setEmail] = React.useState('');
   const[password, setPassword] = React.useState('');
@@ -36,7 +36,7 @@ function App() {
       }
       else{
          
-        navigate('/LogIn')
+        navigate('/companies')
       }
 
     }
@@ -104,10 +104,8 @@ function App() {
 
 
               </div>
-<Link to={"./companies"}>
-              <button className='btn btn-success'     onClick={register}>Register</button>
-              </Link>
-            </MDBCol>
+               <button className='btn btn-success'     onClick={register}>Register</button>
+             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
               <MDBCardImage src='https://j.top4top.io/p_2600burl71.png' fluid/>
@@ -121,4 +119,4 @@ function App() {
   );
 }
 
-export default App;
+export default CompanySingUp;

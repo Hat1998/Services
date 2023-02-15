@@ -35,7 +35,7 @@ function InvestorSingUp() {
       }
       else{
          
-        navigate('/LogIn')
+        navigate('/show')
       }
      
 
