@@ -89,9 +89,10 @@ function ShowCards() {
 
     {data.map((item:any) =>{
 
+    
       return(
-
-    <GridItem key={item.id} my={20}> 
+ 
+    <GridItem key={item.id}> 
     <Flex
       // bg="#edf3f8"
       rounded="lg"

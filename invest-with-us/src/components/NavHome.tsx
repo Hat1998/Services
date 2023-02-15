@@ -36,7 +36,7 @@ import SingUp from "./SingUp";
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
-      <Box  w={'full'} mx={'auto'} position="fixed" zIndex={50}>
+      <Box  w={'full'} mx={'auto'}  mb={2}>
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}
@@ -87,7 +87,7 @@ import SingUp from "./SingUp";
 <Button
               as={'a'}
               fontSize={'md'}
-              fontWeight={400}
+              fontWeight={800}
               variant={''}
               href={''}>
               Sign In
@@ -126,7 +126,7 @@ import SingUp from "./SingUp";
                 <Link
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'md'}
+                  fontSize={'2xl'}
                   fontWeight={500}
                   color={linkColor}
                   _hover={{
@@ -176,7 +176,7 @@ import SingUp from "./SingUp";
               fontWeight={500}>
               {label}
             </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
+            <Text fontSize={' '}>{subLabel}</Text>
           </Box>
           <Flex
             transition={'all .3s ease'}
@@ -270,8 +270,6 @@ import SingUp from "./SingUp";
       href: './',
     },
    
-    
-   
     {
       label: 'Contact',
       href: './Contact',
@@ -279,6 +277,10 @@ import SingUp from "./SingUp";
     {
       label: 'About Us',
       href: './AboutUs',
+    },
+    {
+      label: 'See The all compony',
+      href: './show',
     },
   ];
  

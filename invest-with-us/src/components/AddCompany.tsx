@@ -160,7 +160,7 @@ const[error, setError] = React.useState(false)
           h="auto"
           templateColumns="repeat(1, 2fr)"
         >
-                <CloseIcon/>
+                {/* <CloseIcon/> */}
 
           <FormControl
             isRequired

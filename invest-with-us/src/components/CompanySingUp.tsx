@@ -39,6 +39,7 @@ function CompanySingUp() {
       else{
          
         navigate('/companies')
+        localStorage.setItem('name',name);
       }
 
     }
