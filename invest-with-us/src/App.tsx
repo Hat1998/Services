@@ -13,6 +13,7 @@ import InvestorSingUp from './components/InvestorSingUp';
 import SingUp from './components/SingUp';
 import LogIn from './components/LogIn';
 import Contact from './components/Contact';
+import AboutUs from './components/AboutUs';
 
 function App() {
  
@@ -40,6 +41,8 @@ function App() {
         <Route path='/SinguUp' element={<SingUp/>}/>
         <Route path='/LogIn' element={<LogIn/>}/>
         <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/AboutUs' element={<AboutUs/>}/>
+
 
 
         <Route path='/InvestorSingUp' element={<InvestorSingUp/>}/>

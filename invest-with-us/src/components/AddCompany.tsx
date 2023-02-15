@@ -1,3 +1,5 @@
+import { GrClose } from 'react-icons/Gr';
+
 import {
   Alert,
   Box,
@@ -15,7 +17,7 @@ import {
   Heading,
   Divider,
 } from "@chakra-ui/react";
-import { StarIcon } from "@chakra-ui/icons";
+import { CloseIcon, StarIcon } from "@chakra-ui/icons";
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import React from "react";
@@ -144,6 +146,7 @@ const[error, setError] = React.useState(false)
       <NavCompany />
 
       <Box w="full" h="full" my={"auto"} p={5}>
+
         <Grid
           w={"full"}
           p={10}
@@ -156,6 +159,8 @@ const[error, setError] = React.useState(false)
           h="auto"
           templateColumns="repeat(1, 2fr)"
         >
+                <CloseIcon/>
+
           <FormControl
             isRequired
             display={"grid"}

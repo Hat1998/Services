@@ -331,7 +331,7 @@ import SingUp from "./SingUp";
     },
     {
       label: 'About Us',
-      href: '#',
+      href: './AboutUs',
     },
   ];
  
