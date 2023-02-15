@@ -1,6 +1,6 @@
 import { Link as ReachLink } from "react-router-dom"
 
-
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 import {
     Box,
@@ -32,11 +32,12 @@ import SingUp from "./SingUp";
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
+    
   
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
-      <Box  w={'full'} mx={'auto'}  mb={2}>
+      <Box  w={'full'} mx={'auto'} mb={0}>
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}
@@ -126,7 +127,7 @@ import SingUp from "./SingUp";
                 <Link
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'2xl'}
+                  fontSize={'md'}
                   fontWeight={500}
                   color={linkColor}
                   _hover={{
@@ -278,9 +279,6 @@ import SingUp from "./SingUp";
       label: 'About Us',
       href: './AboutUs',
     },
-    {
-      label: 'See The all compony',
-      href: './show',
-    },
+   
   ];
  

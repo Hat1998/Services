@@ -7,6 +7,7 @@ import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { MDBIcon } from "mdb-react-ui-kit";
 import NavCompany from "./NavCompany";
 import FooterHome from "./FooterHome";
+import Search from "./Search";
 
 
 function ShowCards() {
@@ -36,29 +37,7 @@ function ShowCards() {
          }, 2000);
        },
    [])
-   //
-   
-// const UpdateItam=(id:any) => {
-// console.log(id);
-// axios.put(`https://63e223f43e12b1937638a4ed.mockapi.io/todo/${id}`)
-// localStorage.getItem('id')
-// }
-//   const DeleteItam= (id:any)=>{
-//       console.log(id);
-//       axios.delete(`https://63e223f43e12b1937638a4ed.mockapi.io/todo/${id}`).then(res=>{
-//           setData(data.filter((del)=>{
-//           console.log(res);
-//           return del.id!=id
-//   })
-//     )  })
-      
-//   }
 
-// const  goToCarddetails = (cardId:any) => {
-//   localStorage.setItem("selectedCard", cardId);
-//   props.history.push('/card-details');
-// // you can manage here to pass the clicked card id to the card details page if needed
-// }
 
 
   return (
@@ -78,7 +57,7 @@ function ShowCards() {
   
  
 /></div>:<></>}
-
+{/* <Search/> */}
   {/*companies cards */}
  {/*Grid  cards  Container --------------------------------------------------*/}
  <Box >

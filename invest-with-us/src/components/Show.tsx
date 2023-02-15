@@ -15,24 +15,25 @@ function Show() {
     const open = () => setIsOpen(true)
     const close = () => setIsOpen(false)
    
-    React.useEffect(() => {
+  //   React.useEffect(() => {
     
-   axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB`).then(res=> {
-    console.log(res.data)
-   setData(res.data)
+  //  axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB`).then(res=> {
+  //   console.log(res.data)
+  
+  //  setData(res.data)
  
-   })
-    },[]) 
-    const deldetTest =(id:any)=>{
+  //  })
+  //   },[]) 
+  //   const deldetTest =(id:any)=>{
 
-      console.log("Test");
-      console.log(id);
+  //     console.log("Test");
+  //     console.log(id);
       
-      axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`)
-      .then(res=> {console.log(res) })
-      // DeleteItems(id)
+  //     axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`)
+  //     .then(res=> {console.log(res) })
+  //     // DeleteItems(id)
 
-    }
+  //   }
      
 // const UpdateItam=(id:any) => {
 //   console.log(id);
@@ -104,127 +105,126 @@ function Show() {
     // {if(localStorage.get('name')===item.name){
     
     // }}
-    {data.map((item:any) =>{
 
     return (
-    <GridItem key={item.id}> 
-    <Flex
-      // bg="#edf3f8"
-      rounded="lg"
-      display= 'Flex'
-      _dark={{ bg: "#3e3e3e" }}
-      p={5}
-      mx={'auto'}
-      w="xs"
-      h={"lx"}
-      alignItems="center"
-      justifyContent="center"
-      
-    
-    >
    
-      <Box
-        w="xs"
-        bg="white"
-        _dark={{ bg: "gray.800" }}
-        shadow="xl"
+      <GridItem key={localStorage.get('id')}> 
+      <Flex
+        // bg="#edf3f8"
         rounded="lg"
-        overflow="hidden"
-        mx="auto"
+        display= 'Flex'
+        _dark={{ bg: "#3e3e3e" }}
+        p={5}
+        mx={'auto'}
+        w="xs"
         h={"lx"}
+        alignItems="center"
+        justifyContent="center"
         
       
       >
-        <Flex alignItems="center" px={6} py={3} bg="#fff" shadow={'lg'} >
-
-<chakra.h1 mx={'auto'} color="balck" fontWeight="bold" fontSize="2xl" >
-{item.companyName}
-
- </chakra.h1>
-</Flex>
-        <Image
-          w="full"
-          h={56}
-          fit="cover"
-          src={item.photo}
-          alt="avatar"
-          rounded="sm"
-         />
-
-         
-
-        <Box py={4} px={6}>
-           <chakra.h1
-            display="block"
-            fontSize="2xl"
-            color="gray.800"
-            _dark={{ color: "white" }}
-            fontWeight="bold"
-            
-          >
-   
-          </chakra.h1>
-    
-          <chakra.span
-            fontSize="sm"
-            color="gray.800"
-            _dark={{ color: "gray.200" }}
+     
+        <Box
+          w="xs"
+          bg="white"
+          _dark={{ bg: "gray.800" }}
+          shadow="xl"
+          rounded="lg"
+          overflow="hidden"
+          mx="auto"
+          h={"lx"}
+          
         
-          >
-              <chakra.h1 fontSize={'18px'} fontWeight='bold'>Conference:</chakra.h1>
-              <chakra.h1 fontSize={'16px'}  mt={1} >{item.conference}</chakra.h1>
-         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Annual Income:</chakra.h1>
-              <chakra.h1 fontSize={'18px'}  mt={1} >{item.annualIncome} <MDBIcon fas icon="dollar-sign" size='lg' /></chakra.h1>
-         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >investment Price:</chakra.h1>
-              <chakra.h1 fontSize={'18px'}  mt={1} ><MDBIcon fas icon="hand-holding-usd" size='lg' /> {item.investmentPrice}</chakra.h1>
-         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Location:</chakra.h1>
-              <chakra.h1 fontSize={'18px'} mt={1}  ><MDBIcon far icon="compass" /> {item.location}</chakra.h1>
-              <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={2} > Business Field: </chakra.h1>
-              <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {item.business}</chakra.h1>
-             
-          <Link to={`/details/${item.id}`}>
-          <Button fontSize={'lg'} mt={5} color={'white'} bg={'black'}>Details</Button>
-          </Link>
-          </chakra.span>
-
-{/*           
-<<<<<<< HEAD
-       
-
-          <chakra.span
-            fontSize="md"
-            color="gray.700"
-            _dark={{ color: "gray.200" }}
-          >
-         <chakra.h1 fontSize={'18px'} fontWeight='bold' >investment Price:</chakra.h1>
-              <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
-             
-          </chakra.span>
-           {/* <Button mt={'10px'} onClick={()=> {goToCarddetails(data.id)}}>Details</Button> */}
-           {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
-            
-            
-         </Box>
-      </Box>
-    </Flex>
-
-
-    </GridItem>
+        >
+          <Flex alignItems="center" px={6} py={3} bg="#fff" shadow={'lg'} >
   
-      )
-    })}
-
-
-
- 
-
+  <chakra.h1 mx={'auto'} color="balck" fontWeight="bold" fontSize="2xl" >
+  { localStorage.get('companyName')}
+  
+   </chakra.h1>
+  </Flex>
+          <Image
+            w="full"
+            h={56}
+            fit="cover"
+            src={localStorage.get('photo')}
+            alt="avatar"
+            rounded="sm"
+           />
+  
+           
+  
+          <Box py={4} px={6}>
+             <chakra.h1
+              display="block"
+              fontSize="2xl"
+              color="gray.800"
+              _dark={{ color: "white" }}
+              fontWeight="bold"
+              
+            >
+     
+            </chakra.h1>
+      
+            <chakra.span
+              fontSize="sm"
+              color="gray.800"
+              _dark={{ color: "gray.200" }}
+          
+            >
+                <chakra.h1 fontSize={'18px'} fontWeight='bold'>Conference:</chakra.h1>
+                <chakra.h1 fontSize={'16px'}  mt={1} >{localStorage.get('conference')}</chakra.h1>
+           <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Annual Income:</chakra.h1>
+                <chakra.h1 fontSize={'18px'}  mt={1} >{localStorage.get('annualIncome')} <MDBIcon fas icon="dollar-sign" size='lg' /></chakra.h1>
+           <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >investment Price:</chakra.h1>
+                <chakra.h1 fontSize={'18px'}  mt={1} ><MDBIcon fas icon="hand-holding-usd" size='lg' /> {localStorage.get('investmentPrice')}</chakra.h1>
+           <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Location:</chakra.h1>
+                <chakra.h1 fontSize={'18px'} mt={1}  ><MDBIcon far icon="compass" /> {localStorage.get('location')}</chakra.h1>
+                <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={2} > Business Field: </chakra.h1>
+                <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {localStorage.get('business')}</chakra.h1>
+               
+            {/* <Link to={`/details/${item.id}`}>
+            <Button fontSize={'lg'} mt={5} color={'white'} bg={'black'}>Details</Button>
+            </Link> */}
+            </chakra.span>
+  
+  {/*           
+  <<<<<<< HEAD
+         
+  
+            <chakra.span
+              fontSize="md"
+              color="gray.700"
+              _dark={{ color: "gray.200" }}
+            >
+           <chakra.h1 fontSize={'18px'} fontWeight='bold' >investment Price:</chakra.h1>
+                <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
+               
+            </chakra.span>
+             {/* <Button mt={'10px'} onClick={()=> {goToCarddetails(data.id)}}>Details</Button> */}
+             {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
+              
+              
+           </Box>
+        </Box>
+      </Flex>
+  
+  
+      </GridItem>
+  
+      )      
+    }
     
     
-
+    
+    
+    
+    
+    
     {/*End of Grid body */}
 
  
 
-  }
+  
   
   export default Show;

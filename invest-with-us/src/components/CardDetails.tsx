@@ -24,6 +24,8 @@ import {
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
 import { MDBIcon } from 'mdb-react-ui-kit';
+import FooterHome from './FooterHome';
+import NavCompany from './NavCompany';
 
 function CardDetails(props:any) {
   // (window as Window).location = 'abc'
@@ -54,6 +56,8 @@ function CardDetails(props:any) {
   }, []);
 
   return (
+     <>
+    <NavCompany/>
     <Container maxW={'7xl'}>
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
@@ -248,6 +252,8 @@ function CardDetails(props:any) {
         </Stack>
       </SimpleGrid>
     </Container>
+    <FooterHome/>
+    </>
   )
 }
 
