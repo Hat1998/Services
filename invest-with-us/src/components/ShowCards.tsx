@@ -83,7 +83,7 @@ function ShowCards() {
  {/*Grid  cards  Container --------------------------------------------------*/}
  <Box >
      {/*Start of Grid body */}
-    <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto'  columns={{ base: 1, md: 2, lg: 4 }}> 
+    <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto' gap={20} columns={{ base: 1, md: 2, lg: 4 }}> 
     
     {/*Mapping ----------  */}
 

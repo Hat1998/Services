@@ -7,7 +7,7 @@ import { MDBIcon } from "mdb-react-ui-kit";
 import NavCompany from "./NavCompany";
 function Show() {
     const [data , setData] =React.useState<any[]>([])
-    const [id , setId] =React.useState<any>()
+    const [id , setId] =React.useState<any>([])
     
     const navigate = useNavigate()
     // -----------
@@ -16,34 +16,53 @@ function Show() {
     const close = () => setIsOpen(false)
    
     React.useEffect(() => {
+      setId(localStorage.getItem("id"))
    axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB`).then(res=> {
     console.log(res.data)
    setData(res.data)
+ 
    })
     },[]) 
+    const deldetTest =(id:any)=>{
+
+      console.log("Test");
+      console.log(id);
+      
+      axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`)
+      .then(res=> {console.log(res) })
+      // DeleteItems(id)
+
+    }
      
 // const UpdateItam=(id:any) => {
 //   console.log(id);
 //   axios.put(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${'id'}`)
 // }
-    const DeleteItems= (id:any)=>{
+    // const DeleteItems= (id:any)=>{
+    //   console.log(id);
       
-         axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
-            setData(data.filter((del)=>{
-             console.log(res);
-            return del.id!=id
-    })
+    //      axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
+    //       console.log(res , "delet data");
+          
+       
+    //        setData(data.filter((del)=>{
+    //       console.log(res);
+    //        return del.id!=id
+         
+    // })
     
-      )  })
-      axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
-      close() 
+      // ) 
+  //  }).catch((err)=>{console.log(err);
+  //  })
+      //  axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
+      // close() 
        
      
-  }
+  // }
 
-  const cancel = ()=>{
-    close()  
-  }
+  // const cancel = ()=>{
+  //   close()  
+  // }
     // --------------------------------------------
     
 // const Dlelete=()=> {
@@ -83,10 +102,10 @@ function Show() {
     // --------------------------------------------
     
     return (
-        <>
+        <div className="">
           <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto' gap={15} columns={{ base: 1, md: 2, lg: 3 }}> 
            
-    <GridItem key={localStorage.getItem('id')}> 
+    <GridItem key={localStorage.getItem("id")}> 
     <Flex
       rounded="lg"
       display= 'Flex'
@@ -118,6 +137,7 @@ function Show() {
          />
 
          <Flex alignItems="center" px={6} py={3} bg="gray.300" >
+         <button onClick={()=>{deldetTest(id)}}>DeleteTest</button>
 
           <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
         {  localStorage.getItem('companyName')}
@@ -158,6 +178,8 @@ function Show() {
            
     {/* <Button bg={"red"} color='#fff' m={2} onClick={()=>Dlelete}>Deleteaa</Button> */}
 
+
+
     {/* Alet----------------------------- */}
     <Button m={5} onClick={open}>
        Delete
@@ -181,8 +203,10 @@ function Show() {
             <ButtonGroup size='sm'>
               <Button variant='outline' m={2} onClick={close} >Cancel</Button>
               {/* <Button colorScheme='red'>Dlelete</Button> */}
+              <Button bg={"red"} color='#fff' m={2} onClick={()=>DeleteItems(id)}>Delete</Button>
+             
+
               
-              <Button bg={"red"} color='#fff' m={2}onClick={()=>{DeleteItems(data.id)}}>Delete</Button>
             </ButtonGroup>
           </PopoverFooter>
         </PopoverContent>
@@ -205,7 +229,7 @@ function Show() {
     
    
   
-      </>
+      </div>
     )
   }
   

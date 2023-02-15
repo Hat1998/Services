@@ -26,7 +26,7 @@ import { MdLocalShipping } from 'react-icons/md';
 import { MDBIcon } from 'mdb-react-ui-kit';
 
 function CardDetails(props:any) {
-  (window as Window).location = 'abc'
+  // (window as Window).location = 'abc'
   const[data, setData]= React.useState<any>([])
     const[firstName, setFirstName]= React.useState('')
     const[jog, setjob]= React.useState('')
@@ -226,7 +226,7 @@ function CardDetails(props:any) {
             </Box>
           </Stack>
 
-          <Button onClick={(e) => window.location = `mailto:${data.email}`}
+          <Button onClick={(e) => window.location= `mailto:${data.email}`}
             rounded={'none'}
             w={'full'}
             mt={8}
