@@ -1,12 +1,24 @@
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter,Text, Center } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function SingUp() {
+function Get() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <div>
-      <Button colorScheme='teal' bg={"green.400"} color={'#fff'}onClick={onOpen}>Sing Up</Button>
+      <Button mt={35}
+   
+   rightIcon={<ArrowForwardIcon />}
+   rounded={'full'}
+   size={'lg'}
+   fontWeight={'normal'}
+   px={6}
+   colorScheme={'red'}
+   bg={'#48BB78'}
+   _hover={{ bg: 'green.500' }}onClick={onOpen}>
+    <Text as='b'>Get Started</Text>
+    </Button>
 
       <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay />
@@ -46,4 +58,4 @@ function SingUp() {
   )
 }
 
-export default SingUp;
+export default Get;

@@ -14,16 +14,19 @@ import SingUp from './components/SingUp';
 import LogIn from './components/LogIn';
 import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
+import Send from './components/Send';
+import Search from './components/Search';
 
 function App() {
  
   return (
     <div className="App">
+{/* <Search/> */}
 
        {/* <CompanySingUp/>  */}
 {/* <ShowCards/> */}
     {/* <AddCompany/>  */}
-       
+       {/* <Show/> */}
         {/* <Route path='/details' element={<CardDetails/>}/>
 =======
         {/* <Route path='/show/:id' element={<ShowCards/>}/> */}
@@ -31,7 +34,9 @@ function App() {
         <Route path='/' element={<HomePage/>}/> 
 
         <Route path='/show/:id' element={<ShowCards/>}/> 
-        <Route path='/show' element={<ShowCards/>}/> 
+        {/* change show and add search */}
+        {/* <Route path='/show' element={<ShowCards/>}/>  */}
+        <Route path='/show' element={<Search/>}/> 
         <Route path='/add' element={ <AddCompany/>}/> 
         <Route path='/companies' element={ <CompanyHome/>}/>
         <Route path='/details' element={<CardDetails/>}/>
@@ -42,6 +47,8 @@ function App() {
         <Route path='/LogIn' element={<LogIn/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/AboutUs' element={<AboutUs/>}/>
+        <Route path='/Send' element={<Send/>}/>
+
 
 
 

@@ -24,9 +24,11 @@ import {
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
 import { MDBIcon } from 'mdb-react-ui-kit';
+import FooterHome from './FooterHome';
+import NavCompany from './NavCompany';
 
 function CardDetails(props:any) {
-  (window as Window).location = 'abc'
+  // (window as Window).location = 'abc'
   const[data, setData]= React.useState<any>([])
     const[firstName, setFirstName]= React.useState('')
     const[jog, setjob]= React.useState('')
@@ -54,6 +56,8 @@ function CardDetails(props:any) {
   }, []);
 
   return (
+     <>
+    <NavCompany/>
     <Container maxW={'7xl'}>
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
@@ -226,7 +230,7 @@ function CardDetails(props:any) {
             </Box>
           </Stack>
 
-          <Button onClick={(e) => window.location = `mailto:${data.email}`}
+          <Button onClick={(e) => window.location= `mailto:${data.email}`}
             rounded={'none'}
             w={'full'}
             mt={8}
@@ -248,6 +252,8 @@ function CardDetails(props:any) {
         </Stack>
       </SimpleGrid>
     </Container>
+    <FooterHome/>
+    </>
   )
 }
 

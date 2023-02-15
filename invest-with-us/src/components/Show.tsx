@@ -7,7 +7,7 @@ import { MDBIcon } from "mdb-react-ui-kit";
 import NavCompany from "./NavCompany";
 function Show() {
     const [data , setData] =React.useState<any[]>([])
-    const [id , setId] =React.useState<any>()
+    const [id , setId] =React.useState<any>([])
     
     const navigate = useNavigate()
     // -----------
@@ -15,35 +15,55 @@ function Show() {
     const open = () => setIsOpen(true)
     const close = () => setIsOpen(false)
    
-    React.useEffect(() => {
-   axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB`).then(res=> {
-    console.log(res.data)
-   setData(res.data)
-   })
-    },[]) 
+  //   React.useEffect(() => {
+    
+  //  axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB`).then(res=> {
+  //   console.log(res.data)
+  
+  //  setData(res.data)
+ 
+  //  })
+  //   },[]) 
+  //   const deldetTest =(id:any)=>{
+
+  //     console.log("Test");
+  //     console.log(id);
+      
+  //     axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`)
+  //     .then(res=> {console.log(res) })
+  //     // DeleteItems(id)
+
+  //   }
      
 // const UpdateItam=(id:any) => {
 //   console.log(id);
 //   axios.put(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${'id'}`)
 // }
-    const DeleteItems= (id:any)=>{
+    // const DeleteItems= (id:any)=>{
+    //   console.log(id);
       
-         axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
-            setData(data.filter((del)=>{
-             console.log(res);
-            return del.id!=id
-    })
+    //      axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
+    //       console.log(res , "delet data");
+          
+       
+    //        setData(data.filter((del)=>{
+    //       console.log(res);
+    //        return del.id!=id
+         
+    // })
     
-      )  })
-      axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
-      close() 
+      // ) 
+  //  }).catch((err)=>{console.log(err);
+  //  })
+      //  axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
+      // close() 
        
      
-  }
+  // }
 
-  const cancel = ()=>{
-    close()  
-  }
+  // const cancel = ()=>{
+  //   close()  
+  // }
     // --------------------------------------------
     
 // const Dlelete=()=> {
@@ -75,138 +95,136 @@ function Show() {
 //               <Button bg={"red"} color='#fff' m={2} onClick={()=>DeleteItems}>Delete</Button>
 //             </ButtonGroup>
 //           </PopoverFooter>
-//         </PopoverContent>
+//         </PopoverContent>  
 //       </Popover>
 //       </>
   
 // }
     // --------------------------------------------
     
+    // {if(localStorage.get('name')===item.name){
+    
+    // }}
+
     return (
-        <>
-          <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto' gap={15} columns={{ base: 1, md: 2, lg: 3 }}> 
-           
-    <GridItem key={localStorage.getItem('id')}> 
-    <Flex
-      rounded="lg"
-      display= 'Flex'
-      _dark={{ bg: "#3e3e3e" }}
-      p={5}
-      w="md"
-      h={"lx"}
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Box
-        w="xs"
-        bg="white"
-        _dark={{ bg: "gray.800" }}
-        shadow="lg"
+   
+      <GridItem key={localStorage.get('id')}> 
+      <Flex
+        // bg="#edf3f8"
         rounded="lg"
-        overflow="hidden"
-        mx="auto"
+        display= 'Flex'
+        _dark={{ bg: "#3e3e3e" }}
+        p={5}
+        mx={'auto'}
+        w="xs"
         h={"lx"}
+        alignItems="center"
+        justifyContent="center"
+        
       
       >
-        <Image
-          w="full"
-          h={56}
-          fit="cover"
-          src={localStorage.getItem('photo')}
-          alt="avatar"
+     
+        <Box
+          w="xs"
+          bg="white"
+          _dark={{ bg: "gray.800" }}
+          shadow="xl"
           rounded="lg"
-         />
-
-         <Flex alignItems="center" px={6} py={3} bg="gray.300" >
-
-          <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
-        {  localStorage.getItem('companyName')}
-         
-           </chakra.h1>
-        </Flex>
-
-        <Box py={4} px={6}>
-           <chakra.h1
-            display="block"
-            fontSize="2xl"
-            color="gray.800"
-            _dark={{ color: "white" }}
-            fontWeight="bold"
-          >
-   
-          </chakra.h1>
-    
-          <chakra.span
-            fontSize="sm"
-            color="gray.700"
-            _dark={{ color: "gray.200" }}
-          >
-              <chakra.h1 fontSize={'18px'} fontWeight='bold'>Conference:</chakra.h1>
-              <chakra.h1 fontSize={'16px'}  mt={1} >{localStorage.getItem('conference')}</chakra.h1>
-         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Annual Income:</chakra.h1>
-              <chakra.h1 fontSize={'18px'}  mt={1} >{localStorage.getItem('annualIncome')} <MDBIcon fas icon="dollar-sign" size='lg' /></chakra.h1>
-         <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >investment Price:</chakra.h1>
-              <chakra.h1 fontSize={'18px'}  mt={1} ><MDBIcon fas icon="hand-holding-usd" size='lg' /> {localStorage.getItem('investmentPrice')}</chakra.h1>
-              <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Location:</chakra.h1>
-              <chakra.h1 fontSize={'18px'} mt={1}  ><MDBIcon far icon="compass" /> {localStorage.getItem('location')}</chakra.h1>
-              <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={2} > Business Field: </chakra.h1>
-              <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {localStorage.getItem('business')}</chakra.h1>
-             
-             
-          </chakra.span>
-          {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
+          overflow="hidden"
+          mx="auto"
+          h={"lx"}
+          
+        
+        >
+          <Flex alignItems="center" px={6} py={3} bg="#fff" shadow={'lg'} >
+  
+  <chakra.h1 mx={'auto'} color="balck" fontWeight="bold" fontSize="2xl" >
+  { localStorage.get('companyName')}
+  
+   </chakra.h1>
+  </Flex>
+          <Image
+            w="full"
+            h={56}
+            fit="cover"
+            src={localStorage.get('photo')}
+            alt="avatar"
+            rounded="sm"
+           />
+  
            
-    {/* <Button bg={"red"} color='#fff' m={2} onClick={()=>Dlelete}>Deleteaa</Button> */}
-
-    {/* Alet----------------------------- */}
-    <Button m={5} onClick={open}>
-       Delete
-      </Button>
-      <Popover
-        returnFocusOnClose={false}
-        isOpen={isOpen}
-        onClose={close}
-        placement='right'
-        closeOnBlur={false}
-      >
-       
-        <PopoverContent fontSize={'xl'}>
-          <PopoverHeader fontWeight='semibold'>Confirmation</PopoverHeader>
-          <PopoverArrow />
-          <PopoverCloseButton />
-          <PopoverBody>
-            Are you sure you want to Delete Your Company?
-          </PopoverBody>
-          <PopoverFooter justifyContent='flex-end'>
-            <ButtonGroup size='sm'>
-              <Button variant='outline' m={2} onClick={close} >Cancel</Button>
-              {/* <Button colorScheme='red'>Dlelete</Button> */}
+  
+          <Box py={4} px={6}>
+             <chakra.h1
+              display="block"
+              fontSize="2xl"
+              color="gray.800"
+              _dark={{ color: "white" }}
+              fontWeight="bold"
               
-              <Button bg={"red"} color='#fff' m={2}onClick={()=>{DeleteItems(data.id)}}>Delete</Button>
-            </ButtonGroup>
-          </PopoverFooter>
-        </PopoverContent>
-      </Popover>
-    <Link to="/update"><Button bg={'green.100'}>Update</Button></Link>
-    
-    {/* Alet----------------------------- */}
+            >
+     
+            </chakra.h1>
+      
+            <chakra.span
+              fontSize="sm"
+              color="gray.800"
+              _dark={{ color: "gray.200" }}
+          
+            >
+                <chakra.h1 fontSize={'18px'} fontWeight='bold'>Conference:</chakra.h1>
+                <chakra.h1 fontSize={'16px'}  mt={1} >{localStorage.get('conference')}</chakra.h1>
+           <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Annual Income:</chakra.h1>
+                <chakra.h1 fontSize={'18px'}  mt={1} >{localStorage.get('annualIncome')} <MDBIcon fas icon="dollar-sign" size='lg' /></chakra.h1>
+           <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >investment Price:</chakra.h1>
+                <chakra.h1 fontSize={'18px'}  mt={1} ><MDBIcon fas icon="hand-holding-usd" size='lg' /> {localStorage.get('investmentPrice')}</chakra.h1>
+           <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Location:</chakra.h1>
+                <chakra.h1 fontSize={'18px'} mt={1}  ><MDBIcon far icon="compass" /> {localStorage.get('location')}</chakra.h1>
+                <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={2} > Business Field: </chakra.h1>
+                <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {localStorage.get('business')}</chakra.h1>
+               
+            {/* <Link to={`/details/${item.id}`}>
+            <Button fontSize={'lg'} mt={5} color={'white'} bg={'black'}>Details</Button>
+            </Link> */}
+            </chakra.span>
+  
+  {/*           
+  <<<<<<< HEAD
+         
+  
+            <chakra.span
+              fontSize="md"
+              color="gray.700"
+              _dark={{ color: "gray.200" }}
+            >
+           <chakra.h1 fontSize={'18px'} fontWeight='bold' >investment Price:</chakra.h1>
+                <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
+               
+            </chakra.span>
+             {/* <Button mt={'10px'} onClick={()=> {goToCarddetails(data.id)}}>Details</Button> */}
+             {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
+              
+              
+           </Box>
         </Box>
-      </Box>
-    </Flex>
-
+      </Flex>
+  
+  
+      </GridItem>
+  
+      )      
+    }
     
-    </GridItem>
-   
-    </SimpleGrid>
+    
+    
+    
+    
+    
+    
+    {/*End of Grid body */}
+
  
 
-
-
-    
-   
   
-      </>
-    )
-  }
   
   export default Show;

@@ -7,6 +7,7 @@ import ClientsHome from './ClientsHome'
 import FooterHome from './FooterHome'
 import OurServices from './OurServices'
 import { Link } from 'react-router-dom'
+import Get from './Get'
 
 function HomePage() {
   return (
@@ -26,20 +27,11 @@ textAlign={'left'}>
     
     >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
    
-<Button 
-    mt={35}
-   
-    rightIcon={<ArrowForwardIcon />}
-    rounded={'full'}
-    size={'lg'}
-    fontWeight={'normal'}
-    px={6}
-    colorScheme={'red'}
-    bg={'#48BB78'}
-    _hover={{ bg: 'green.500' }}>
-      <Text  as='b'>Get Started</Text>
+
     
-    </Button>
+    <Get/>
+    
+    
     </Box>
 <Box boxSize='md' my={"7rem"}>
   <Image 
@@ -77,9 +69,9 @@ textAlign={'center'} pt={50} ><Text
       </div>
     </div>
 
-    <div className="row text-center">
+    <div className="row text-center  " >
       <div className="col-md-4 mb-4 mb-md-0">
-        <div className="card border border-success-subtle">
+        <div className="card border border-success-subtle h-100">
           <div className="card-body py-4 mt-2 ">
             <div className="d-flex justify-content-center mb-4">
               <img src="https://img.swapcard.com/?u=https%3A%2F%2Fcdn-api.swapcard.com%2Fpublic%2Fimages%2F825c16152a4842f980ac387196098a63.png&q=0.8&m=crop&w=240&h=240"
@@ -105,15 +97,15 @@ textAlign={'center'} pt={50} ><Text
               </li>
             </ul>
             <p className="mb-2">
-              <i className="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat
-              ad velit ab hic tenetur.
+              <i className="fas fa-quote-left pe-2"></i>What a beuatiful website for surfing
+              investments in a lot of companies. This website has made everything as easy as things
+              must have been. I like it and I like using it
             </p>
           </div>
         </div>
       </div>
       <div className="col-md-4 mb-4 mb-md-0">
-        <div className="card border border-success-subtle">
+        <div className="card border border-success-subtle h-100">
           <div className="card-body py-4 mt-2">
             <div className="d-flex justify-content-center mb-4">
               <img src="https://img.swapcard.com/?u=https%3A%2F%2Fcdn-api.swapcard.com%2Fpublic%2Fimages%2F24ee4582fcfa4123b5cb55d16536709b.png&q=0.8&m=crop&w=240&h=240"
@@ -139,15 +131,14 @@ textAlign={'center'} pt={50} ><Text
               </li>
             </ul>
             <p className="mb-2">
-              <i className="fas fa-quote-left pe-2"></i>Autem, totam debitis suscipit saepe
-              sapiente magnam officiis quaerat necessitatibus odio assumenda perferendis
-              labore laboriosam.
+              <i className="fas fa-quote-left pe-2"></i> 
+              A great website with a great simplicity in using and in reaching investments
             </p>
           </div>
         </div>
       </div>
       <div className="col-md-4 mb-0">
-        <div className="card border border-success-subtle">
+        <div className="card border border-success-subtle h-100">
           <div className="card-body py-4 mt-2">
             <div className="d-flex justify-content-center mb-4">
               <img src="https://img.swapcard.com/?u=https%3A%2F%2Fcdn-api.swapcard.com%2Fpublic%2Fimages%2F08fa8baec1b64046a08eaf91eff1e5dd.png&q=0.8&m=crop&w=240&h=240"
@@ -173,9 +164,10 @@ textAlign={'center'} pt={50} ><Text
               </li>
             </ul>
             <p className="mb-2">
-              <i className="fas fa-quote-left pe-2"></i>Cras sit amet nibh libero, in gravida
-              nulla metus scelerisque ante sollicitudin commodo cras purus odio,
-              vestibulum in tempus viverra turpis.
+              <i className="fas fa-quote-left pe-2"></i> This websit has helped us a lot
+              during investing and gave us flexability in reaching investments that
+              were available in a lot of varius companies 
+
             </p>
           </div>
         </div>

@@ -100,6 +100,7 @@ const[error, setError] = React.useState(false)
     else{
        
       axios.post("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB", {
+        id,
         firstName,
         jog,
         email,
@@ -159,7 +160,7 @@ const[error, setError] = React.useState(false)
           h="auto"
           templateColumns="repeat(1, 2fr)"
         >
-                <CloseIcon/>
+                {/* <CloseIcon/> */}
 
           <FormControl
             isRequired
@@ -325,19 +326,40 @@ const[error, setError] = React.useState(false)
         <Textarea placeholder="Description About Your Work" onChange={e =>{setDescription(e.target.value)}} />
         </Box>
       */}
-          <Button
+      <Box   w={'300px'} margin='auto'>
+      <Button
             mt={5}
             colorScheme="teal"
-            w={"50%"}
+           
             mx="auto"
             bg={"green.500"}
             color={"white"}
             fontSize={25}
             onClick={post}
+            w = '100px'
+            _hover={{ bg: 'green.600' }}
 
           >
-            Create
+            Add
           </Button>
+          <Button
+          w = '100px'
+            mt={5}
+            ml='10px'
+            colorScheme="teal"
+             bg={"gray.500"}
+            color={"white"}
+            fontSize={25}
+             _hover={{ bg: 'gray.600' }}
+             onClick={()=> {navigate('/companies')}}
+
+
+ 
+          >
+            Cancel
+          </Button>
+      </Box>
+          
           {/* <Button bg={"lightgreen"} onClick={()=>{DeleteItems}}>delete</Button> */}
         </Grid>
       </Box>

@@ -15,9 +15,13 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import FooterHome from './FooterHome';
+import NavHome from './NavHome';
   
   export default function CallToActionWithVideo() {
     return (
+      <Box>
+        <NavHome/>
       <Container maxW={'7xl'}>
         <Stack
           align={'center'}
@@ -49,7 +53,7 @@ import { Link } from 'react-router-dom';
               Invest in conferences!
               </Text>
             </Heading>
-            <Text color={'gray.900'}>
+            <Text color={'gray.900'} fontSize={'2xl'}>
             Our website serves the companies participating in the conferences so that it allows them to display their investments with ease and also allows the investor to access the investment of the companies participating in the conferences and view the details of each company.
             </Text>
             <Stack
@@ -61,10 +65,13 @@ import { Link } from 'react-router-dom';
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
+                leftIcon={<ArrowBackIcon />}
                 colorScheme={'red'}
                 bg={'#48BB78'}
                 _hover={{ bg: 'green.500' }}>
-                <ArrowBackIcon/>Back To Home
+                  <Text as='b'>
+                Back To Home
+                </Text>
               </Button>
               </Link>
             </Stack>
@@ -106,6 +113,8 @@ import { Link } from 'react-router-dom';
           </Flex>
         </Stack>
       </Container>
+      <FooterHome/>
+      </Box>
     );
   }
   
@@ -131,5 +140,6 @@ import { Link } from 'react-router-dom';
           fill="currentColor"
         />
       </Icon>
+      
     );
   };
