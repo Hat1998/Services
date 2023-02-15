@@ -31,21 +31,21 @@ import { Link } from 'react-router-dom';
   export default function contact() {
     return (
 
-      <Container bg="#fff" maxW="full" mt={150}  centerContent overflow="hidden">
+      <Container bg="#fff" maxW="full" mt={100}  centerContent overflow="hidden">
         <Flex>
             
           <Box
            
             color="Black"
-            border= '2px'  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx={'auto'} shadow={'xl'} rounded={'xl'}
+            border= '2px'  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx={'auto'} shadow={'xl'} rounded={'lg'}
             m={{ sm: 4, md: 16, lg: 10 }}
             p={{ sm: 5, md: 5, lg: 16 }}>
-            <Box p={5}>
             <Link to ={"/"}>
-            <div style={{color:"#48BB78"}}>
-            <i className="fa-solid fa-circle-arrow-left fa-3x "></i>
+            <div className="me-5" style={{color:"#48BB78"}}>
+            <i className="fa-solid fa-circle-arrow-left fa-3x me-5"></i>
              </div>
              </Link> 
+            <Box p={10}>
                 
               <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                 <WrapItem>

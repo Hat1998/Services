@@ -47,7 +47,7 @@ function AddCompany() {
           axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
               setData(data.filter((show: { id: any; })=>{
               console.log(res);
-              return show.id==id
+              return show.id==id;
       })
         )  })
           
@@ -110,10 +110,10 @@ localStorage.setItem('companyName',business)
  <Box>
 <NavCompany/>
 
-    <Box w='full' h='full' my={'auto'} p={5} >
+    <Box w='full' h='full' my={'auto'} p={50} >
      
   
-      <Grid  w={'full'} p={10}  border= '1px'  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx={'auto'} shadow={'xl'} rounded={'xl'}  h='auto' templateColumns='repeat(1, 2fr)' >
+      <Grid  w={'full'} p={10}  border= '1px'  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx={'auto'} shadow={'xl'} rounded={'xl'}  h='auto' templateColumns='repeat(1, 2fr)'my={'5rem'} >
       <FormControl isRequired display={'grid'}  gap={"50"}  gridTemplateColumns='45% 45% '  justifyContent={'space-around'}  >
               
 {/** start company info */}
