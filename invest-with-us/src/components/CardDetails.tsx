@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react'
 import React from 'react'
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -19,6 +18,7 @@ import {
   VisuallyHidden,
   List,
   ListItem,
+  Box,
 } from '@chakra-ui/react';
 
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -27,7 +27,8 @@ import { MDBIcon } from 'mdb-react-ui-kit';
 
 function CardDetails(props:any) {
    const [data , setData] =React.useState<any[]>([]);
-  const {id}=useParams()
+  const {id}= useParams()
+  console.log(id)
   React.useEffect(() => {
     axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`)
        .then((res) => {
@@ -235,12 +236,4 @@ function CardDetails(props:any) {
   )
 }
 
-
-
-
-
-
-
-    
-
-export default CardDetails;
+export default CardDetails

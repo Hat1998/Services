@@ -4,36 +4,46 @@ import { Link } from "react-router-dom";
 import { Alert,Box, FormControl, FormLabel, Input, Textarea , Grid, GridItem, chakra, Image, Flex, Icon, Button, SimpleGrid, ButtonGroup, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverFooter, PopoverHeader, PopoverTrigger} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { MDBIcon } from "mdb-react-ui-kit";
+import NavCompany from "./NavCompany";
 function Show() {
     const [data , setData] =React.useState<any[]>([])
+    const [id , setId] =React.useState<any>()
+    
     const navigate = useNavigate()
     // -----------
     const [isOpen, setIsOpen] = React.useState(false)
-    const open = () => setIsOpen(!isOpen)
+    const open = () => setIsOpen(true)
     const close = () => setIsOpen(false)
+   
     React.useEffect(() => {
-   axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${localStorage.getItem('id')}`).then(res=> {
-    
-   console.log(res.data)
+   axios.get(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB`).then(res=> {
+    console.log(res.data)
    setData(res.data)
    })
     },[]) 
-    let id =(localStorage.getItem('id'));
+     
 // const UpdateItam=(id:any) => {
 //   console.log(id);
 //   axios.put(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${'id'}`)
 // }
     const DeleteItems= (id:any)=>{
-        console.log(id);
-        axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
+      
+         axios.delete(`https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB/${id}`).then(res=>{
             setData(data.filter((del)=>{
-            console.log(res);
+             console.log(res);
             return del.id!=id
     })
     
       )  })
       axios.get("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB")
-    }
+      close() 
+       
+     
+  }
+
+  const cancel = ()=>{
+    close()  
+  }
     // --------------------------------------------
     
 // const Dlelete=()=> {
@@ -149,7 +159,7 @@ function Show() {
     {/* <Button bg={"red"} color='#fff' m={2} onClick={()=>Dlelete}>Deleteaa</Button> */}
 
     {/* Alet----------------------------- */}
-    <Button mr={5} onClick={open}>
+    <Button m={5} onClick={open}>
        Delete
       </Button>
       <Popover
@@ -169,9 +179,10 @@ function Show() {
           </PopoverBody>
           <PopoverFooter justifyContent='flex-end'>
             <ButtonGroup size='sm'>
-              <Button variant='outline'>Cancel</Button>
+              <Button variant='outline' m={2} onClick={close} >Cancel</Button>
               {/* <Button colorScheme='red'>Dlelete</Button> */}
-              <Button bg={"red"} color='#fff' m={2} onClick={DeleteItems}>Delete</Button>
+              
+              <Button bg={"red"} color='#fff' m={2}onClick={()=>{DeleteItems(data.id)}}>Delete</Button>
             </ButtonGroup>
           </PopoverFooter>
         </PopoverContent>

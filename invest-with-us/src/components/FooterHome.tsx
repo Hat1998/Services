@@ -13,6 +13,8 @@ import {
   IconButton,
 } from '@chakra-ui/react';
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { BsGithub, BsLinkedin, BsPerson } from 'react-icons/bs';
+
 import { BiMailSend } from 'react-icons/bi';
 
 // import AppStoreBadge from '@/components/AppStoreBadge';
@@ -131,8 +133,8 @@ export default function LargeWithAppLinksAndSocial() {
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
+            <SocialButton label={'Linkedin'} href={'#'}>
+              <BsLinkedin />
             </SocialButton>
             <SocialButton label={'Instagram'} href={'#'}>
               <FaInstagram />

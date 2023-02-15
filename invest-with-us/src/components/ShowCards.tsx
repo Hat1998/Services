@@ -5,12 +5,19 @@ import { SimpleGrid,Box,Spinner, FormControl, FormLabel, Input, Textarea , Grid,
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { MdEmail, MdHeadset, MdLocationOn } from "react-icons/md";
 import { MDBIcon } from "mdb-react-ui-kit";
+import NavCompany from "./NavCompany";
+import FooterHome from "./FooterHome";
 
 
 function ShowCards() {
 
   const navigate = useNavigate();
   const [data , setData] =React.useState<any[]>([])
+  const [id , setId] =React.useState<number>()
+
+  
+   
+
 // to show and hide spinner for 3 sec
   const [showElement,setShowElement] = React.useState(true)
 
@@ -47,15 +54,18 @@ function ShowCards() {
       
 //   }
 
-function goTo(e:any){
-
-  e.data
-  
-}
+// const  goToCarddetails = (cardId:any) => {
+//   localStorage.setItem("selectedCard", cardId);
+//   props.history.push('/card-details');
+// // you can manage here to pass the clicked card id to the card details page if needed
+// }
 
 
   return (
+    
         <div className="Show_cards">
+                  <NavCompany/>
+
 {showElement?<div className="spinner"> 
 <Spinner
    boxSize='6rem'
@@ -158,8 +168,24 @@ function goTo(e:any){
           <Button fontSize={'lg'} mt={5} color={'white'} bg={'black'}>Details</Button>
           </Link>
           </chakra.span>
-           
-        </Box>
+{/*           
+<<<<<<< HEAD
+       
+
+          <chakra.span
+            fontSize="md"
+            color="gray.700"
+            _dark={{ color: "gray.200" }}
+          >
+         <chakra.h1 fontSize={'18px'} fontWeight='bold' >investment Price:</chakra.h1>
+              <chakra.h1 fontSize={'18px'}   >{item.investmentPrice}</chakra.h1>
+             
+          </chakra.span>
+           {/* <Button mt={'10px'} onClick={()=> {goToCarddetails(data.id)}}>Details</Button> */}
+           {/* <Button onClick={()=>{navigate('/details')}}>Details</Button> */}
+            
+            
+         </Box>
       </Box>
     </Flex>
 
@@ -180,6 +206,7 @@ function goTo(e:any){
 
     </Box>
 
+<FooterHome/>
 
         </div>
       )}
