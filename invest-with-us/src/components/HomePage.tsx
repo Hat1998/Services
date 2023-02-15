@@ -14,8 +14,8 @@ function HomePage() {
 <NavHome/>
 
 
-<Box shadow={'lg'} h={'550'} w={'100%'} >
-<Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='400' >
+<Box shadow={'lg'} h={'600'} w={'100%'} >
+<Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='500' >
     <SimpleGrid columns={2} spacingX={'1000px'} w={'auto'} 
   
 textAlign={'left'}>

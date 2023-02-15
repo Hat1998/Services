@@ -54,7 +54,7 @@ import SingUp from "./SingUp";
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
-      <Box  w={'full'} mx={'auto'} >
+      <Box  w={'full'} mx={'auto'} position="fixed" zIndex={50} >
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}
@@ -128,9 +128,9 @@ import SingUp from "./SingUp";
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">Justina Clark</Text>
+                  <Text fontSize="sm">{localStorage.getItem('name')}</Text>
                   <Text fontSize="xs" color="gray.600">
-                    Admin
+                   
                   </Text>
                 </VStack>
                 <Box display={{ base: 'none', md: 'flex' }}>

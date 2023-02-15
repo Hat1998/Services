@@ -36,6 +36,7 @@ function InvestorSingUp() {
       else{
          
         navigate('/show')
+        localStorage.setItem('name',name);
       }
      
 

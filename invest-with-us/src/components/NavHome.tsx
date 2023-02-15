@@ -36,7 +36,7 @@ import SingUp from "./SingUp";
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
-      <Box  w={'full'} mx={'auto'} >
+      <Box  w={'full'} mx={'auto'} position="fixed" zIndex={50}>
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}
