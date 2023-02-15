@@ -100,6 +100,7 @@ const[error, setError] = React.useState(false)
     else{
        
       axios.post("https://63e225d4109336b6cb00a67d.mockapi.io/companiesDB", {
+        id,
         firstName,
         jog,
         email,
