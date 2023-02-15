@@ -6,6 +6,7 @@ import Show from "./Show";
 import ShowCards from "./ShowCards";
 import NavCompany from "./NavCompany";
 import FooterHome from "./FooterHome";
+import { BiAddToQueue } from "react-icons/bi";
 
 function CompanyHome() {
     const[data, setData]= React.useState<any>([])
@@ -28,15 +29,17 @@ function CompanyHome() {
   return (
     <>
     <NavCompany/>
-      <Box mx={""} width="100px" display="block" justifyContent={"start"}>
+      <Box m={10}  float='right'>
         <Button
+        fontSize='2xl'
           flex={1}
-          bg={"green.200"}
+          bg={"green.400"}
           color="#fff"
           onClick={() => getAndNavigate()}
         >
-          Add New
-        </Button>
+<BiAddToQueue/> New       
+
+ </Button>
       </Box>
 
       {/* this how */}

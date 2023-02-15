@@ -50,11 +50,12 @@ import SingUp from "./SingUp";
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
+    
   
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
-      <Box  w={'full'} mx={'auto'} position="fixed" zIndex={50} >
+      <Box  w={'full'} mx={'auto'}  >
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}
@@ -85,7 +86,7 @@ import SingUp from "./SingUp";
 
   <Image objectFit={'contain'}
   ml={5}
-  h={"90px"}
+  h={"80px"}
   w={"auto"}
   src='https://h.top4top.io/p_2601r33i01.png' alt='Dan Abramov' />
 
@@ -120,7 +121,7 @@ import SingUp from "./SingUp";
                 <Avatar
                   size={'sm'}
                   src={
-                    'https://images.unsplash.com/photo-1619946794135-5bc917a27793?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
+                    'https://apsec.iafor.org/wp-content/uploads/sites/37/2017/02/IAFOR-Blank-Avatar-Image.jpg'
                   }
                 />
                 <VStack

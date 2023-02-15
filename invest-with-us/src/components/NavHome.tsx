@@ -67,9 +67,9 @@ import SingUp from "./SingUp";
 
   <Image objectFit={'contain'}
   ml={5}
-  h={"90px"}
+  h={"80px"}
   w={"auto"}
-  src='https://h.top4top.io/p_2601r33i01.png' alt='Dan Abramov' />
+  src='https://h.top4top.io/p_2601r33i01.png' alt='logo' />
 
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
