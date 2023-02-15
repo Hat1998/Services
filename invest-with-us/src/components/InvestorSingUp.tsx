@@ -100,15 +100,14 @@ function InvestorSingUp() {
                
                onClick={register}
              
-               rightIcon={<ArrowForwardIcon />}
-               rounded={'full'}
+                rounded={'full'}
                size={'lg'}
                fontWeight={'normal'}
                px={6}
                colorScheme={'red'}
                bg={'#48BB78'}
                _hover={{ bg: 'green.500' }}>
-                 <Text  as='b'>Register</Text>
+                 <Text  as='b'>Sign Up</Text>
                
                </Button>
               
