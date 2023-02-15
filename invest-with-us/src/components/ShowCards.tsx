@@ -10,11 +10,7 @@ import { MDBIcon } from "mdb-react-ui-kit";
 function ShowCards() {
 
   const navigate = useNavigate();
-     
   const [data , setData] =React.useState<any[]>([])
-  
-   
-
 // to show and hide spinner for 3 sec
   const [showElement,setShowElement] = React.useState(true)
 
@@ -62,7 +58,7 @@ function goTo(e:any){
         <div className="Show_cards">
 {showElement?<div className="spinner"> 
 <Spinner
-   boxSize='5rem'
+   boxSize='6rem'
   thickness='5px'
   speed='0.65s'
   emptyColor='gray.200'
@@ -111,6 +107,13 @@ function goTo(e:any){
         
       
       >
+        <Flex alignItems="center" px={6} py={3} bg="#fff" shadow={'lg'} >
+
+<chakra.h1 mx={'auto'} color="balck" fontWeight="bold" fontSize="2xl" >
+{item.companyName}
+
+ </chakra.h1>
+</Flex>
         <Image
           w="full"
           h={56}
@@ -120,13 +123,7 @@ function goTo(e:any){
           rounded="sm"
          />
 
-         <Flex alignItems="center" px={6} py={3} bg="gray.300" >
-
-          <chakra.h1 mx={'auto'} color="white" fontWeight="bold" fontSize="xl" >
-          {item.companyName}
          
-           </chakra.h1>
-        </Flex>
 
         <Box py={4} px={6}>
            <chakra.h1
@@ -158,7 +155,7 @@ function goTo(e:any){
               <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {item.business}</chakra.h1>
              
           <Link to={`/details/${item.id}`}>
-          <Button fontSize={'lg'} mt={5}>Details</Button>
+          <Button fontSize={'lg'} mt={5} color={'white'} bg={'black'}>Details</Button>
           </Link>
           </chakra.span>
            

@@ -24,7 +24,7 @@ export default function Home3(){
         bg="white"
         _dark={{ bg: "gray.800" }}
         px={10}
-        py={20}
+        py={10}
         mx="auto"
         
       >

@@ -20,6 +20,7 @@ import {
   List,
   ListItem,
 } from '@chakra-ui/react';
+
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
 import { MDBIcon } from 'mdb-react-ui-kit';
@@ -65,7 +66,7 @@ function CardDetails(props:any) {
               color={useColorModeValue('gray.900', 'gray.400')}
               fontWeight={300}
               fontSize={'2xl'}>
-              ${data.annualIncome} USD
+           annual Income   {data.annualIncome} SAR
             </Text>
           </Box>
 
@@ -85,13 +86,28 @@ function CardDetails(props:any) {
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore
               </Text> */}
-              <Text fontSize={'lg'}>
-              {data.description}
-              </Text>
             </VStack>
             <Box>
               <Text
-                fontSize={{ base: '16px', lg: '18px' }}
+                fontSize={{ base: '16px', lg: '25px' }}
+                color={useColorModeValue('yellow.500', 'yellow.300')}
+                fontWeight={'500'}
+                textTransform={'uppercase'}
+                mb={'4'}>
+               About The Company
+              </Text>
+              <MDBIcon fas icon="book-open"  size='lg'/>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+                <List spacing={2} fontSize={'xl'}>
+                  <ListItem>  {data.description}</ListItem>
+                  
+                </List>
+                
+              </SimpleGrid>
+            </Box>
+            <Box>
+              <Text
+                fontSize={{ base: '16px', lg: '25px' }}
                 color={useColorModeValue('yellow.500', 'yellow.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
@@ -109,7 +125,7 @@ function CardDetails(props:any) {
             </Box>
             <Box>
               <Text
-                fontSize={{ base: '16px', lg: '18px' }}
+                fontSize={{ base: '16px', lg: '25px' }}
                 color={useColorModeValue('yellow.500', 'yellow.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
@@ -125,6 +141,70 @@ function CardDetails(props:any) {
                   </Text>{'  '}
                    {data.business}
                 </ListItem>
+              
+              </List>
+            </Box>
+            <Box>
+              <Text
+                fontSize={{ base: '16px', lg: '25px' }}
+                color={useColorModeValue('yellow.500', 'yellow.300')}
+                fontWeight={'500'}
+                textTransform={'uppercase'}
+                mb={'4'}>
+              Investment 
+              </Text>
+
+              <List spacing={2} fontSize={'lg'}>
+                <ListItem >
+                  <Text as={'span'}  fontWeight={'bold'} >
+                  <MDBIcon fas icon="hand-holding-usd" size='lg' />  Investment Price: 
+                  
+                  </Text>{'  '}
+                   {data.investmentPrice} SAR
+                </ListItem>
+              
+              </List>
+            </Box>
+            <Box>
+              <Text
+                fontSize={{ base: '16px', lg: '25px' }}
+                color={useColorModeValue('yellow.500', 'yellow.300')}
+                fontWeight={'500'}
+                textTransform={'uppercase'}
+                mb={'4'}>
+             Share Price 
+              </Text>
+
+              <List spacing={2} fontSize={'lg'}>
+                <ListItem >
+                  <Text as={'span'}  fontWeight={'bold'} >
+                  <MDBIcon fas icon="money-bill-alt" size='lg' /> Share Price: 
+                  
+                  </Text>{'  '}
+                   {data.sharePrice} SAR
+                </ListItem>
+              
+              </List>
+            </Box>
+            <Box>
+              <Text
+                fontSize={{ base: '16px', lg: '25px' }}
+                color={useColorModeValue('yellow.500', 'yellow.300')}
+                fontWeight={'500'}
+                textTransform={'uppercase'}
+                mb={'4'}>
+                Conference
+              </Text>
+
+              <List spacing={2} fontSize={'lg'}>
+                <ListItem  >
+                  <Text as={'span'}  fontWeight={'bold'} >
+                  <MDBIcon fas icon="home" size='lg' /> Conference: 
+                  </Text>{'  '}
+                  
+                   {data. conference}
+                </ListItem>
+                
               
               </List>
             </Box>
