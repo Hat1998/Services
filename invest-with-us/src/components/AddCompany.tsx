@@ -327,30 +327,16 @@ const[error, setError] = React.useState(false)
         </Box>
       */}
       <Box   w={'300px'} margin='auto'>
-      <Button
-            mt={5}
-            colorScheme="teal"
-           
-            mx="auto"
-            bg={"green.500"}
-            color={"white"}
-            fontSize={25}
-            onClick={post}
-            w = '100px'
-            _hover={{ bg: 'green.600' }}
 
-          >
-            Add
-          </Button>
-          <Button
-          w = '100px'
-            mt={5}
-            ml='10px'
+
+      <Button
+           mt={5}
+           mx="auto"
             colorScheme="teal"
-             bg={"gray.500"}
+             bg={"gray.400"}
             color={"white"}
             fontSize={25}
-             _hover={{ bg: 'gray.600' }}
+             _hover={{ bg: 'gray.500' }}
              onClick={()=> {navigate('/companies')}}
 
 
@@ -358,6 +344,25 @@ const[error, setError] = React.useState(false)
           >
             Cancel
           </Button>
+          
+
+      <Button
+           w = '100px'
+           mt={5}
+           ml='10px'
+            colorScheme="teal"
+           
+            
+            bg={"green.500"}
+            color={"white"}
+            fontSize={25}
+            onClick={post}
+            _hover={{ bg: 'green.600' }}
+
+          >
+            Create
+          </Button>
+          
       </Box>
           
           {/* <Button bg={"lightgreen"} onClick={()=>{DeleteItems}}>delete</Button> */}

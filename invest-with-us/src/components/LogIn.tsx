@@ -37,7 +37,10 @@ function App() {
 
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-           
+            <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+
+                
+            Sign in </p>
 
             
 
@@ -66,7 +69,8 @@ function App() {
                 _hover={{ bg: 'green.500' }}
                 onClick={()=>{navigate('/show')}}
                 >
-                  <Text  as='b'>Log in</Text>
+                  <Text  as='b'>Sign in
+</Text>
                 
                 </Button>
               

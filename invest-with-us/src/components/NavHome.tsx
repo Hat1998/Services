@@ -86,12 +86,12 @@ import SingUp from "./SingUp";
 
 <Link as={ReachLink} to='/LogIn'>
 <Button
-              as={'a'}
-              fontSize={'md'}
-              fontWeight={800}
-              variant={''}
-              href={''}>
-              Log In
+            as={'a'}
+            fontSize={'sm'}
+            fontWeight={400}
+            variant={'link'}
+            mt={3}>
+              Sign In
             </Button>
 </Link>
            
@@ -119,7 +119,7 @@ import SingUp from "./SingUp";
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Stack direction={'row'} spacing={5} mt={10}>
+      <Stack direction={'row'} spacing={5} mt={9}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>

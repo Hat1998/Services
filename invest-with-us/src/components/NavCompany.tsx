@@ -37,6 +37,7 @@ import {
     FiMenu,
     FiBell,
     FiChevronDown,
+    FiLogIn,
   } from 'react-icons/fi';
   import {
     HamburgerIcon,
@@ -45,6 +46,7 @@ import {
     ChevronRightIcon,
     BellIcon,
     SearchIcon,
+    ArrowForwardIcon,
   } from '@chakra-ui/icons';
 import SingUp from "./SingUp";
 import {useNavigate} from 'react-router-dom'
@@ -152,7 +154,11 @@ import {useNavigate} from 'react-router-dom'
               <MenuItem>Settings</MenuItem>
               <MenuItem>Billing</MenuItem>
               <MenuDivider />
-              <Button onClick ={removeAndNavigate} ml='6px'>Sign out</Button>
+              <Button onClick ={removeAndNavigate} w={'full'} bg={"none"} 
+              
+              rightIcon={<FiLogIn />}
+
+              >Sign out</Button>
             </MenuList>
           </Menu>
         </Flex>
