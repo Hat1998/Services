@@ -12,9 +12,16 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { Button,Text } from '@chakra-ui/react';
+import {ArrowForwardIcon} from '@chakra-ui/icons'
+
+import { useNavigate } from 'react-router-dom';
 
 function App() {
+
+
+  const navigate = useNavigate()
   return (
     <MDBContainer fluid>
 
@@ -30,10 +37,7 @@ function App() {
 
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-
-                
-                Log In </p>
+           
 
             
 
@@ -50,8 +54,23 @@ function App() {
           
 
               
-
-              <MDBBtn className='mb-4' size='lg' color='success'>LOGIN</MDBBtn>
+                          <Button 
+                mt={35}
+              
+                rightIcon={<ArrowForwardIcon />}
+                rounded={'full'}
+                size={'lg'}
+                fontWeight={'normal'}
+                px={6}
+                colorScheme={'red'}
+                bg={'#48BB78'}
+                _hover={{ bg: 'green.500' }}
+                onClick={()=>{navigate('/show')}}
+                >
+                  <Text  as='b'>Log in</Text>
+                
+                </Button>
+              
               <a className="small text-muted" href="#!">Forgot password?</a>
                   <p className="mb-5 pb-lg-2" style={{color: 'green'}}>Don't have an account? <a href="#!"
                       style={{color: 'black'}}>Register here</a></p>

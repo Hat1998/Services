@@ -13,6 +13,8 @@ import {
 }
 from 'mdb-react-ui-kit';
 import { Link , useNavigate} from 'react-router-dom';
+import { Button, Text } from '@chakra-ui/react';
+import {ArrowForwardIcon} from '@chakra-ui/icons'
 
 function InvestorSingUp() {
   const[name, setName] = React.useState('');
@@ -94,7 +96,22 @@ function InvestorSingUp() {
                 {!cheked?<p  className= 'ms-4 text-danger fs-6 mb-2  '> You should Agree All statements </p>:cheked}
               </div>
 
-              <button className='btn btn-success'     onClick={register}>Register</button>
+               <Button 
+               
+               onClick={register}
+             
+               rightIcon={<ArrowForwardIcon />}
+               rounded={'full'}
+               size={'lg'}
+               fontWeight={'normal'}
+               px={6}
+               colorScheme={'red'}
+               bg={'#48BB78'}
+               _hover={{ bg: 'green.500' }}>
+                 <Text  as='b'>Register</Text>
+               
+               </Button>
+              
               
 
             </MDBCol>

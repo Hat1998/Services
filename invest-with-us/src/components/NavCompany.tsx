@@ -47,11 +47,17 @@ import {
     SearchIcon,
   } from '@chakra-ui/icons';
 import SingUp from "./SingUp";
+import {useNavigate} from 'react-router-dom'
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
     
-  
+     const navigate = useNavigate()
+
+     function removeAndNavigate(){
+      navigate('/')
+      localStorage.removeItem('name')
+     }
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
@@ -146,7 +152,7 @@ import SingUp from "./SingUp";
               <MenuItem>Settings</MenuItem>
               <MenuItem>Billing</MenuItem>
               <MenuDivider />
-              <MenuItem>Sign out</MenuItem>
+              <Button onClick ={removeAndNavigate} ml='6px'>Sign out</Button>
             </MenuList>
           </Menu>
         </Flex>

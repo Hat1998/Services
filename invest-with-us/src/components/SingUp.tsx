@@ -6,7 +6,10 @@ function SingUp() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <div>
-      <Button colorScheme='teal' bg={"green.400"} color={'#fff'}onClick={onOpen}>Sing Up</Button>
+      <Button colorScheme='teal' bg={"green.400"} color={'#fff'}onClick={onOpen}
+      _hover={{ bg: 'green.500' }}
+      
+      >Sign Up</Button>
 
       <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay />
@@ -23,7 +26,10 @@ function SingUp() {
           </ModalBody>
 
           <ModalFooter mx={'auto'} >
-          <Link to='/SingUp'>  <Button bg={"green.400"} color='#fff' mr={"4rem"}>
+          <Link to='/SingUp'>  <Button bg={"green.400"} color='#fff' mr={"4rem"}
+          _hover={{ bg: 'green.500' }}
+          
+          >
           Company
             </Button>
             
@@ -32,7 +38,9 @@ function SingUp() {
 
 
 
-            <Link to='/InvestorSingUp'>  <Button textColor={"white"} bg={"#2F2E41"}>Investor</Button>
+            <Link to='/InvestorSingUp'>  <Button textColor={"white"} bg={"blue.700"} 
+            _hover={{ bg: "blue.900"}}
+            >Investor</Button>
             </Link>
             
           </ModalFooter>

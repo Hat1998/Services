@@ -13,6 +13,8 @@ import {
 }
 from 'mdb-react-ui-kit';
 import { Link , useNavigate} from 'react-router-dom';
+import { Button, Text } from '@chakra-ui/react';
+import {ArrowForwardIcon} from '@chakra-ui/icons'
 
 function CompanySingUp() {
   const[name, setName] = React.useState('');
@@ -104,7 +106,23 @@ function CompanySingUp() {
 
 
               </div>
-               <button className='btn btn-success'     onClick={register}>Register</button>
+               
+               <Button 
+               
+                onClick={register}
+              
+                rightIcon={<ArrowForwardIcon />}
+                rounded={'full'}
+                size={'lg'}
+                fontWeight={'normal'}
+                px={6}
+                colorScheme={'red'}
+                bg={'#48BB78'}
+                _hover={{ bg: 'green.500' }}>
+                  <Text  as='b'>Register</Text>
+                
+                </Button>
+               
              </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
