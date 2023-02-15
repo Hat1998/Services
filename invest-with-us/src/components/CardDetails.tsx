@@ -26,7 +26,22 @@ import { MdLocalShipping } from 'react-icons/md';
 import { MDBIcon } from 'mdb-react-ui-kit';
 
 function CardDetails(props:any) {
-   const [data , setData] =React.useState<any[]>([]);
+  (window as Window).location = 'abc'
+  const[data, setData]= React.useState<any>([])
+    const[firstName, setFirstName]= React.useState('')
+    const[jog, setjob]= React.useState('')
+    const[email, setEmail]= React.useState('')
+    const[companyName, setCompanyName]= React.useState("")
+    const[photo, setPhoto]= React.useState('')
+    // const[photo, setPhoto]= React.useState('')
+    const[annualIncome, setAnnualIncome]= React.useState('')
+    const[description, setDescription]= React.useState('')
+    const[location, setLocation]= React.useState('')
+    const[business, setBusiness]= React.useState('')
+    const[sharePrice, setSharePrice]= React.useState('')
+    const[investmentPrice, setInvestmentPrice]= React.useState('')
+    const[conference, setConference]= React.useState('')
+    
   const {id}= useParams()
   console.log(id)
   React.useEffect(() => {

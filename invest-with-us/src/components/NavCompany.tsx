@@ -129,7 +129,7 @@ import SingUp from "./SingUp";
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">{localStorage.getItem('name')}</Text>
+                  <Text fontSize="lg">{localStorage.getItem('name')}</Text>
                   <Text fontSize="xs" color="gray.600">
                    
                   </Text>

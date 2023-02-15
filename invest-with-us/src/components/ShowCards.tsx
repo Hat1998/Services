@@ -83,7 +83,7 @@ function ShowCards() {
  {/*Grid  cards  Container --------------------------------------------------*/}
  <Box >
      {/*Start of Grid body */}
-    <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto' gap={15} columns={{ base: 1, md: 2, lg: 3 }}> 
+    <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto'  columns={{ base: 1, md: 2, lg: 4 }}> 
     
     {/*Mapping ----------  */}
 
@@ -91,17 +91,19 @@ function ShowCards() {
 
       return(
 
-    <GridItem key={item.id}> 
+    <GridItem key={item.id} my={20}> 
     <Flex
       // bg="#edf3f8"
       rounded="lg"
       display= 'Flex'
       _dark={{ bg: "#3e3e3e" }}
       p={5}
-      w="md"
+      mx={'auto'}
+      w="xs"
       h={"lx"}
       alignItems="center"
       justifyContent="center"
+      
     
     >
    
@@ -168,6 +170,7 @@ function ShowCards() {
           <Button fontSize={'lg'} mt={5} color={'white'} bg={'black'}>Details</Button>
           </Link>
           </chakra.span>
+
 {/*           
 <<<<<<< HEAD
        
@@ -191,6 +194,7 @@ function ShowCards() {
 
 
     </GridItem>
+  
       )
     })}
 
@@ -198,7 +202,6 @@ function ShowCards() {
 
  
     </SimpleGrid>
-
     
     
 
