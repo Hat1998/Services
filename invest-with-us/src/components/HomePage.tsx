@@ -33,9 +33,10 @@ textAlign={'left'}>
     
     
     </Box>
-<Box boxSize='md' my={"7rem"}>
+<Box boxSize='md' my={"7rem"} display={{ base: 'none', md: 'md', lg: 'block' }}>
   <Image 
   w={'auto'}
+
     src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
 </Box>  
 </SimpleGrid>

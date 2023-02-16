@@ -27,7 +27,7 @@ function Search () {
 React.useEffect(()=>{
     setTimeout(function() {
       setShowElement(false)
-         }, 2000);
+         }, 1000);
        },
    [])
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import {
   chakra,
@@ -26,6 +26,7 @@ import { MdLocalShipping } from 'react-icons/md';
 import { MDBIcon } from 'mdb-react-ui-kit';
 import FooterHome from './FooterHome';
 import NavCompany from './NavCompany';
+import { IoMdArrowRoundBack } from 'react-icons/Io';
 
 function CardDetails(props:any) {
   // (window as Window).location = 'abc'
@@ -58,12 +59,19 @@ function CardDetails(props:any) {
   return (
      <>
     <NavCompany/>
+    <Link to='/show'>
+    <Box  ml={20} >
+          <IoMdArrowRoundBack size={40}  />
+          </Box>
+          </Link>
     <Container maxW={'7xl'}>
       <SimpleGrid
+      
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 5 }}>
         <Flex>
+          
           <Image
             rounded={'lg'}
             alt={' image'}
