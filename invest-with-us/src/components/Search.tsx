@@ -95,7 +95,7 @@ React.useEffect(()=>{
             <Search2Icon />
             </InputLeftElement>
             
-   <Input variant='outline' w={"full"} placeholder='Search For Company'value={companyName}
+   <Input variant='outline' w={"30rem"} shadow={'xl'} placeholder='Search For Company'value={companyName}
               onChange={handleBrandChange}  />
             </InputGroup>
 
@@ -104,6 +104,8 @@ React.useEffect(()=>{
      {/*Start of Grid body */}
      <SimpleGrid  borderColor={"blackAlpha.200"} borderRadius={'2xl'} mx='auto' columns={{ base: 1, md: 2, lg: 4 }}> 
             {filteredList.map((data, index) => (
+              <div className="bg-image hover-zoom">
+             <Link to={`/details/${data.id}`}>
               <GridItem key={data.id}> 
               <Flex
                 // bg="#edf3f8"
@@ -132,7 +134,7 @@ React.useEffect(()=>{
                   
                 
                 >
-                  <Flex alignItems="center" px={0} py={3} bg="#fff" shadow={'lg'} >
+                  <Flex alignItems="center" px={0} py={3} bg="#fff"  >
           
         
           </Flex>
@@ -147,7 +149,7 @@ React.useEffect(()=>{
           
                    
           
-                  <Box py={4} px={6} alignItems="center" >
+                  <Box py={4} px={3} alignItems="center" >
                      {/* <chakra.h1
                       display="block"
                       fontSize="2xl"
@@ -159,13 +161,17 @@ React.useEffect(()=>{
                     >
          
                     </chakra.h1> */}
-                    <chakra.h1  color="#fff" mb={3} p={2} fontWeight="bold" bg={'green.400'} fontSize="3xl" display="block"  rounded={'lg'}>
-          {data.companyName}
-           </chakra.h1> 
+                    <Flex alignItems="center" px={6} py={2} bg="green.400" color={'white'}  rounded={'lg'}>
+  
+  <chakra.h1 mx={'auto'} color="balck" fontWeight="bold" fontSize="2xl">
+  {data.companyName}
+   </chakra.h1>
+  </Flex> 
                     <chakra.span
                       fontSize="sm"
                       color="gray.800"
                       _dark={{ color: "gray.200" }}
+                     
                      
 
                   
@@ -182,7 +188,7 @@ React.useEffect(()=>{
                         <chakra.h1 fontSize={'18px'} mt={2}>  {data.business}</chakra.h1>
                        
                     <Link to={`/details/${data.id}`}>
-                    <Button fontSize={'lg'} mt={5} color={'white'} bg={'green.400'}>Details</Button>
+                    <Button fontSize={'lg'} mt={5} color={'white'} bg={'green.400'}>Learn More</Button>
                     </Link>
                     </chakra.span>
           
@@ -210,9 +216,10 @@ React.useEffect(()=>{
           
               </GridItem>
             
+            </Link>
+            </div>
             ))}
                 </SimpleGrid>
-    
     
 
     {/*End of Grid body */}

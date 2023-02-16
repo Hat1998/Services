@@ -63,7 +63,7 @@ import {useNavigate} from 'react-router-dom'
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
-      <Box  w={'full'} mx={'auto'} mb={10} >
+      <Box  w={'auto'} mx={'auto'} mb={10} >
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}

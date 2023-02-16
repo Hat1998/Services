@@ -47,7 +47,7 @@ function CompanyHome() {
       {/* this how */}
       
       
-      <FooterHome />
+      {/* <FooterHome /> */}
 
     </>
   );
