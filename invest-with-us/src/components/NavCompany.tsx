@@ -92,11 +92,14 @@ import {useNavigate} from 'react-router-dom'
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
 
-  <Image objectFit={'contain'}
+          <Link  as={ReachLink} to={'/'}
+>  <Image objectFit={'contain'}
   ml={5}
   h={"80px"}
   w={"auto"}
-  src='https://h.top4top.io/p_2601r33i01.png' alt='Dan Abramov' />
+  src='https://h.top4top.io/p_2601r33i01.png' alt='logo' />
+
+</Link>
 
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -179,7 +182,7 @@ import {useNavigate} from 'react-router-dom'
   
   const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
-    const linkHoverColor = useColorModeValue('gray.800', 'white');
+    const linkHoverColor = useColorModeValue('green.500', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
