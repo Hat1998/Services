@@ -1,6 +1,6 @@
 import { Link as ReachLink } from "react-router-dom"
 
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+
 
 import {
     Box,
@@ -19,7 +19,26 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    MenuButton,
+    Avatar,
+    HStack,
+    Menu,
+    VStack,
+    MenuItem,
+    MenuList,
+    MenuDivider,
   } from '@chakra-ui/react';
+  import {
+    FiHome,
+    FiTrendingUp,
+    FiCompass,
+    FiStar,
+    FiSettings,
+    FiMenu,
+    FiBell,
+    FiChevronDown,
+    FiLogIn,
+  } from 'react-icons/fi';
   import {
     HamburgerIcon,
     CloseIcon,
@@ -27,17 +46,24 @@ import {
     ChevronRightIcon,
     BellIcon,
     SearchIcon,
+    ArrowForwardIcon,
   } from '@chakra-ui/icons';
 import SingUp from "./SingUp";
+import {useNavigate} from 'react-router-dom'
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
     
-  
+     const navigate = useNavigate()
+
+     function removeAndNavigate(){
+      navigate('/')
+      localStorage.removeItem('name')
+     }
     return (
       // this is make the nav fixed
       // position="fixed" zIndex={50}
-      <Box  w={'full'} mx={'auto'} mb={0}>
+      <Box  w={'full'} mx={'auto'} mb={10} >
         <Flex
         
           bg={useColorModeValue('white', 'gray.800')}
@@ -65,7 +91,7 @@ import SingUp from "./SingUp";
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-<Link  as={ReachLink} to={'/'}
+          <Link  as={ReachLink} to={'/'}
 >  <Image objectFit={'contain'}
   ml={5}
   h={"80px"}
@@ -73,6 +99,8 @@ import SingUp from "./SingUp";
   src='https://h.top4top.io/p_2601r33i01.png' alt='logo' />
 
 </Link>
+
+  
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
@@ -84,21 +112,59 @@ import SingUp from "./SingUp";
             direction={'row'}
             spacing={6}>
 
-<Link as={ReachLink} to='/LogIn'>
-<Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            mt={3}>
-              Sign In
-            </Button>
-</Link>
-           
-              <SingUp/>
 
            
- 
+<HStack spacing={{ base: '0', md: '6' }}>
+        <IconButton
+          size="lg"
+          variant="ghost"
+          aria-label="open menu"
+          icon={<FiBell />}
+        />
+        <Flex alignItems={'center'}>
+          <Menu>
+            <MenuButton
+              py={2}
+              transition="all 0.3s"
+              _focus={{ boxShadow: 'none' }}>
+              <HStack>
+                <Avatar
+                  size={'sm'}
+                  src={
+                    'https://apsec.iafor.org/wp-content/uploads/sites/37/2017/02/IAFOR-Blank-Avatar-Image.jpg'
+                  }
+                />
+                <VStack
+                  display={{ base: 'none', md: 'flex' }}
+                  alignItems="flex-start"
+                  spacing="1px"
+                  ml="2">
+                  <Text fontSize="lg">{localStorage.getItem('name')}</Text>
+                  <Text fontSize="xs" color="gray.600">
+                   
+                  </Text>
+                </VStack>
+                <Box display={{ base: 'none', md: 'flex' }}>
+                  <FiChevronDown />
+                </Box>
+              </HStack>
+            </MenuButton>
+            <MenuList
+              bg={useColorModeValue('white', 'gray.900')}
+              borderColor={useColorModeValue('gray.200', 'gray.700')}>
+              <MenuItem>Profile</MenuItem>
+              <MenuItem>Settings</MenuItem>
+              <MenuItem>Billing</MenuItem>
+              <MenuDivider />
+              <Button onClick ={removeAndNavigate} w={'full'} bg={"none"} 
+              
+              rightIcon={<FiLogIn />}
+
+              >Sign out</Button>
+            </MenuList>
+          </Menu>
+        </Flex>
+      </HStack>
               
       
 
@@ -116,10 +182,10 @@ import SingUp from "./SingUp";
   const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('green.500', 'white');
-    const popoverContentBgColor = useColorModeValue('wh800ite', 'gray.800');
+    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Stack direction={'row'} spacing={5} mt={9}>
+      <Stack direction={'row'} spacing={5} mt={10}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -177,7 +243,7 @@ import SingUp from "./SingUp";
               fontWeight={500}>
               {label}
             </Text>
-            <Text fontSize={' '}>{subLabel}</Text>
+            <Text fontSize={'sm'}>{subLabel}</Text>
           </Box>
           <Flex
             transition={'all .3s ease'}
@@ -270,6 +336,11 @@ import SingUp from "./SingUp";
       label: 'Home',
       href: './',
     },
+    {
+        label: 'Investments',
+        href: './show',
+      },
+    
    
     {
       label: 'Contact',
@@ -279,6 +350,5 @@ import SingUp from "./SingUp";
       label: 'About Us',
       href: './AboutUs',
     },
-   
   ];
  
