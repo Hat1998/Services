@@ -108,7 +108,7 @@ function Show() {
 
     return (
    
-      <GridItem key={localStorage.get('id')}> 
+      <GridItem > 
       <Flex
         // bg="#edf3f8"
         rounded="lg"
@@ -139,7 +139,7 @@ function Show() {
           <Flex alignItems="center" px={6} py={3} bg="#fff" shadow={'lg'} >
   
   <chakra.h1 mx={'auto'} color="balck" fontWeight="bold" fontSize="2xl" >
-  { localStorage.get('companyName')}
+  { localStorage.getItem('companyName')}
   
    </chakra.h1>
   </Flex>
@@ -147,7 +147,7 @@ function Show() {
             w="full"
             h={56}
             fit="cover"
-            src={localStorage.get('photo')}
+            src={localStorage.getItem('photo')}
             alt="avatar"
             rounded="sm"
            />
@@ -173,15 +173,15 @@ function Show() {
           
             >
                 <chakra.h1 fontSize={'18px'} fontWeight='bold'>Conference:</chakra.h1>
-                <chakra.h1 fontSize={'16px'}  mt={1} >{localStorage.get('conference')}</chakra.h1>
+                <chakra.h1 fontSize={'16px'}  mt={1} >{localStorage.getItem('conference')}</chakra.h1>
            <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Annual Income:</chakra.h1>
-                <chakra.h1 fontSize={'18px'}  mt={1} >{localStorage.get('annualIncome')} <MDBIcon fas icon="dollar-sign" size='lg' /></chakra.h1>
+                <chakra.h1 fontSize={'18px'}  mt={1} >{localStorage.getItem('annualIncome')} <MDBIcon fas icon="dollar-sign" size='lg' /></chakra.h1>
            <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >investment Price:</chakra.h1>
-                <chakra.h1 fontSize={'18px'}  mt={1} ><MDBIcon fas icon="hand-holding-usd" size='lg' /> {localStorage.get('investmentPrice')}</chakra.h1>
+                <chakra.h1 fontSize={'18px'}  mt={1} ><MDBIcon fas icon="hand-holding-usd" size='lg' /> {localStorage.getItem('investmentPrice')}</chakra.h1>
            <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={1} >Location:</chakra.h1>
-                <chakra.h1 fontSize={'18px'} mt={1}  ><MDBIcon far icon="compass" /> {localStorage.get('location')}</chakra.h1>
+                <chakra.h1 fontSize={'18px'} mt={1}  ><MDBIcon far icon="compass" /> {localStorage.getItem('location')}</chakra.h1>
                 <chakra.h1 fontSize={'18px'} fontWeight='bold'mt={2} > Business Field: </chakra.h1>
-                <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {localStorage.get('business')}</chakra.h1>
+                <chakra.h1 fontSize={'18px'} mt={1}><MDBIcon fas icon="briefcase" size='lg' mt={5} />  {localStorage.getItem('business')}</chakra.h1>
                
             {/* <Link to={`/details/${item.id}`}>
             <Button fontSize={'lg'} mt={5} color={'white'} bg={'black'}>Details</Button>
