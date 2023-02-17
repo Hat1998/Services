@@ -94,7 +94,7 @@ import {useNavigate} from 'react-router-dom'
 
           <Link  as={ReachLink} to={'/'}
 >  <Image objectFit={'contain'}
-  ml={5}
+  ml={0}
   h={"80px"}
   w={"auto"}
   src='https://h.top4top.io/p_2601r33i01.png' alt='logo' />
