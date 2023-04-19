@@ -15,7 +15,11 @@ function HomePage() {
 <NavHome/>
 
 
-<Box shadow={'lg'} h={'600'} w={'100%'} >
+
+
+
+{/* OLD V */}
+{/* <Box shadow={'lg'} h={'600'} w={'100%'} >
 <Box bgImage={'https://c.top4top.io/p_260026l1s1.png'}  boxSize='500' >
     <SimpleGrid columns={2} spacingX={'1000px'} w={'auto'} 
   
@@ -26,11 +30,8 @@ textAlign={'left'}>
     color={'black'}
     
     >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
-   
-
-    
+     
     <Get/>
-    
     
     </Box>
 <Box boxSize='md' my={"7rem"} display={{ base: 'none', md: 'md', lg: 'block' }}>
@@ -41,9 +42,32 @@ textAlign={'left'}>
 </Box>  
 </SimpleGrid>
 </Box>
- </Box>
-  
+ </Box> */}
+ 
+{/* <Box > */}
 
+
+ <SimpleGrid columns={2}  spacingX={{sm:"100px",lg:'200px'}} spacingY='200px' bgImage={'https://c.top4top.io/p_260026l1s1.png'} >
+  <Box m={'3%'}>
+    <Text w={'auto'} 
+    textAlign={'center'}
+     fontSize={{ base: '16px', md: '40px', lg: '40px' }}
+    color={'black'}
+    
+    >Here we made it easy for you to access the most important investments of the companies participating in the most important conferences.</Text>
+    <Get/>
+    </Box>
+<Box >
+  <Image 
+
+minWidth={"8rem"}
+
+    src={'https://i.top4top.io/p_2599av3jr1.png'} alt='ImageHome' />
+</Box>  
+</SimpleGrid>
+
+{/* </Box> */}
+ 
 
 
  <Box

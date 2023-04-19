@@ -148,6 +148,7 @@ function Show() {
             alt="avatar"
          
            />
+           
   
   <Box py={4} px={3} alignItems="center" >
   <Flex alignItems="center" px={6} py={2} bg="green.400" color={'white'}  rounded={'lg'}>  

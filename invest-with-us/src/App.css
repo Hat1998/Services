@@ -9,6 +9,10 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
